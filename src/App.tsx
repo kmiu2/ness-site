@@ -1,10 +1,13 @@
+import { Grid } from '@mui/material'
 import React from 'react'
-import logo from './assets/ness-logo.png'
 import './App.css'
+import logo from './assets/ness-logo.png'
+import { Header } from './components/main/header'
 
 function App() {
   return (
-    <div className="App">
+    <Grid className="App">
+      <Header />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>NESS site coming soon...</p>
@@ -17,7 +20,7 @@ function App() {
           Join the NESS Discord
         </a>
       </header>
-    </div>
+    </Grid>
   )
 }
 
