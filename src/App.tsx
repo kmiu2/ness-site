@@ -1,6 +1,6 @@
 import React from 'react'
-import logo from './assets/ness-logo.png'
 import './App.css'
+import logo from './assets/ness-logo.png'
 
 function App() {
   return (
@@ -15,6 +15,22 @@ function App() {
           rel="noopener noreferrer"
         >
           Join the NESS Discord
+        </a>
+        <a
+          className="App-link"
+          href="/courses.png"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Click here for a course map
+        </a>
+        <a
+          className="App-link"
+          href="https://ver7ici.github.io/UWCourseMap/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Click here for a prerequisites checker
         </a>
       </header>
     </div>
