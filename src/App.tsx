@@ -16,6 +16,7 @@ function App() {
         >
           Join the NESS Discord
         </a>
+        <p>Useful Links</p>
         <a
           className="App-link"
           href="/courses.png"
@@ -31,6 +32,15 @@ function App() {
           rel="noopener noreferrer"
         >
           Click here for a prerequisites checker
+        </a>
+        <p>Contact Us:</p>
+        <a
+          className="App-link"
+          href="mailto:ness@uwaterloo.ca"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ness@uwaterloo.ca
         </a>
       </header>
     </div>
