@@ -2,6 +2,7 @@ import { Grid } from '@mui/material'
 import React from 'react'
 import './App.css'
 import logo from './assets/ness-logo.png'
+import { Footer } from './components/main/footer'
 import { Header } from './components/main/header'
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
           ness@uwaterloo.ca
         </a>
       </header>
+      <Footer />
     </Grid>
   )
 }
