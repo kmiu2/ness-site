@@ -19,6 +19,32 @@ function App() {
         >
           Join the NESS Discord
         </a>
+        <p>Useful Links</p>
+        <a
+          className="App-link"
+          href="/courses.png"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Click here for a course map
+        </a>
+        <a
+          className="App-link"
+          href="https://ver7ici.github.io/UWCourseMap/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Click here for a prerequisites checker
+        </a>
+        <p>Contact Us:</p>
+        <a
+          className="App-link"
+          href="mailto:ness@uwaterloo.ca"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ness@uwaterloo.ca
+        </a>
       </header>
     </Grid>
   )
