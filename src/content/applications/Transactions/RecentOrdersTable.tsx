@@ -120,7 +120,7 @@ const RecentOrdersTable: FC<RecentOrdersTableProps> = ({ cryptoOrders }) => {
 
     setFilters((prevFilters) => ({
       ...prevFilters,
-      status: status,
+      status,
     }))
   }
 
@@ -155,7 +155,7 @@ const RecentOrdersTable: FC<RecentOrdersTableProps> = ({ cryptoOrders }) => {
   }
 
   const handleLimitChange = (event: ChangeEvent<HTMLInputElement>): void => {
-    setLimit(parseInt(event.target.value))
+    setLimit(parseInt(event.target.value, 10))
   }
 
   const filteredCryptoOrders = applyFilters(cryptoOrders, filters)

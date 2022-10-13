@@ -1,10 +1,10 @@
-import { FC, ReactNode } from 'react';
-import PropTypes from 'prop-types';
-import { styled } from '@mui/material/styles';
-import clsx from 'clsx';
+import { styled } from '@mui/material/styles'
+import clsx from 'clsx'
+import PropTypes from 'prop-types'
+import { FC, ReactNode } from 'react'
 
 interface TextProps {
-  className?: string;
+  className?: string
   color?:
     | 'primary'
     | 'secondary'
@@ -12,9 +12,9 @@ interface TextProps {
     | 'warning'
     | 'success'
     | 'info'
-    | 'black';
-  flex?: boolean;
-  children?: ReactNode;
+    | 'black'
+  flex?: boolean
+  children?: ReactNode
 }
 
 const TextWrapper = styled('span')(
@@ -57,7 +57,7 @@ const TextWrapper = styled('span')(
         }
       }
 `
-);
+)
 
 const Text: FC<TextProps> = ({
   className,
@@ -73,8 +73,8 @@ const Text: FC<TextProps> = ({
     >
       {children}
     </TextWrapper>
-  );
-};
+  )
+}
 
 Text.propTypes = {
   children: PropTypes.node,
@@ -86,8 +86,8 @@ Text.propTypes = {
     'warning',
     'success',
     'info',
-    'black'
-  ])
-};
+    'black',
+  ]),
+}
 
-export default Text;
+export default Text

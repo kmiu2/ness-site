@@ -1,20 +1,20 @@
-import { Box, Button, Container, Grid, Typography } from '@mui/material';
+import { Box, Button, Container, Grid, Typography } from '@mui/material'
 
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom'
 
-import { styled } from '@mui/material/styles';
+import { styled } from '@mui/material/styles'
 
 const TypographyH1 = styled(Typography)(
   ({ theme }) => `
     font-size: ${theme.typography.pxToRem(50)};
 `
-);
+)
 
 const TypographyH2 = styled(Typography)(
   ({ theme }) => `
     font-size: ${theme.typography.pxToRem(17)};
 `
-);
+)
 
 const LabelWrapper = styled(Box)(
   ({ theme }) => `
@@ -28,7 +28,7 @@ const LabelWrapper = styled(Box)(
     padding: ${theme.spacing(0.5)} ${theme.spacing(1.5)};
     margin-bottom: ${theme.spacing(2)};
 `
-);
+)
 
 const MuiAvatar = styled(Box)(
   ({ theme }) => `
@@ -48,7 +48,7 @@ const MuiAvatar = styled(Box)(
       display: block;
     }
 `
-);
+)
 
 const TsAvatar = styled(Box)(
   ({ theme }) => `
@@ -68,7 +68,7 @@ const TsAvatar = styled(Box)(
       display: block;
     }
 `
-);
+)
 
 function Hero() {
   return (
@@ -152,7 +152,7 @@ function Hero() {
         </Grid>
       </Grid>
     </Container>
-  );
+  )
 }
 
-export default Hero;
+export default Hero

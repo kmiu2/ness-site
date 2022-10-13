@@ -60,10 +60,10 @@ const ButtonNotify = styled(Button)(
 function StatusComingSoon() {
   const calculateTimeLeft = () => {
     const difference = +new Date(`2023`) - +new Date()
-    let timeLeft = {}
+    let left = {}
 
     if (difference > 0) {
-      timeLeft = {
+      left = {
         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
         hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
         minutes: Math.floor((difference / 1000 / 60) % 60),
@@ -71,7 +71,7 @@ function StatusComingSoon() {
       }
     }
 
-    return timeLeft
+    return left
   }
 
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft())

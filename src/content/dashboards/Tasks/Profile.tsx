@@ -1,22 +1,22 @@
+import EmailTwoToneIcon from '@mui/icons-material/EmailTwoTone'
+import MessageTwoToneIcon from '@mui/icons-material/MessageTwoTone'
+import PhoneTwoToneIcon from '@mui/icons-material/PhoneTwoTone'
 import {
-  Typography,
-  Tooltip,
-  Rating,
-  IconButton,
-  Divider,
+  Avatar,
   Box,
+  Divider,
+  IconButton,
+  List,
   ListItem,
   ListItemText,
-  List,
-  Avatar,
-  useTheme
-} from '@mui/material';
-import PhoneTwoToneIcon from '@mui/icons-material/PhoneTwoTone';
-import EmailTwoToneIcon from '@mui/icons-material/EmailTwoTone';
-import MessageTwoToneIcon from '@mui/icons-material/MessageTwoTone';
+  Rating,
+  Tooltip,
+  Typography,
+  useTheme,
+} from '@mui/material'
 
 function Profile() {
-  const theme = useTheme();
+  const theme = useTheme()
 
   return (
     <Box>
@@ -25,7 +25,7 @@ function Profile() {
           mx: 'auto',
           mb: 1.5,
           width: theme.spacing(12),
-          height: theme.spacing(12)
+          height: theme.spacing(12),
         }}
         variant="rounded"
         alt="Craig Donin"
@@ -43,7 +43,7 @@ function Profile() {
         <Typography
           variant="h5"
           sx={{
-            pl: 0.5
+            pl: 0.5,
           }}
         >
           4.1
@@ -55,7 +55,7 @@ function Profile() {
           <IconButton
             color="primary"
             sx={{
-              mx: 0.5
+              mx: 0.5,
             }}
           >
             <PhoneTwoToneIcon />
@@ -65,7 +65,7 @@ function Profile() {
           <IconButton
             color="primary"
             sx={{
-              mx: 0.5
+              mx: 0.5,
             }}
           >
             <EmailTwoToneIcon />
@@ -75,7 +75,7 @@ function Profile() {
           <IconButton
             color="primary"
             sx={{
-              mx: 0.5
+              mx: 0.5,
             }}
           >
             <MessageTwoToneIcon />
@@ -84,13 +84,13 @@ function Profile() {
       </Box>
       <List
         sx={{
-          px: 2
+          px: 2,
         }}
       >
         <Divider component="li" />
         <ListItem
           sx={{
-            py: 1.5
+            py: 1.5,
           }}
         >
           <ListItemText
@@ -104,7 +104,7 @@ function Profile() {
         <Divider component="li" />
         <ListItem
           sx={{
-            py: 1.5
+            py: 1.5,
           }}
         >
           <ListItemText
@@ -118,7 +118,7 @@ function Profile() {
         <Divider component="li" />
         <ListItem
           sx={{
-            py: 1.5
+            py: 1.5,
           }}
         >
           <ListItemText
@@ -135,7 +135,7 @@ function Profile() {
         </ListItem>
       </List>
     </Box>
-  );
+  )
 }
 
-export default Profile;
+export default Profile

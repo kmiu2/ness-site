@@ -127,9 +127,7 @@ function TasksAnalytics() {
         show: false,
       },
       y: {
-        formatter: function (val) {
-          return '$ ' + val + 'k'
-        },
+        formatter: (val) => '$ ' + val + 'k',
       },
       theme: 'dark',
     },

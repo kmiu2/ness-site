@@ -1,12 +1,12 @@
-import { Typography, Button, Grid } from '@mui/material';
+import { Button, Grid, Typography } from '@mui/material'
 
-import AddTwoToneIcon from '@mui/icons-material/AddTwoTone';
+import AddTwoToneIcon from '@mui/icons-material/AddTwoTone'
 
 function PageHeader() {
   const user = {
     name: 'Catherine Pike',
-    avatar: '/static/images/avatars/1.jpg'
-  };
+    avatar: '/static/images/avatars/1.jpg',
+  }
   return (
     <Grid container justifyContent="space-between" alignItems="center">
       <Grid item>
@@ -27,7 +27,7 @@ function PageHeader() {
         </Button>
       </Grid>
     </Grid>
-  );
+  )
 }
 
-export default PageHeader;
+export default PageHeader

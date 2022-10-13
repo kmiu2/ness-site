@@ -1,39 +1,39 @@
-import { forwardRef, Ref, useState, ReactElement, ChangeEvent } from 'react';
+import FindInPageTwoToneIcon from '@mui/icons-material/FindInPageTwoTone'
+import SearchTwoToneIcon from '@mui/icons-material/SearchTwoTone'
 import {
   Avatar,
-  Link,
   Box,
   Button,
+  Dialog,
+  DialogContent,
+  DialogTitle,
   Divider,
+  Hidden,
   IconButton,
   InputAdornment,
   lighten,
+  Link,
   List,
   ListItem,
   ListItemAvatar,
+  Slide,
   TextField,
   Theme,
   Tooltip,
   Typography,
-  Dialog,
-  DialogContent,
-  DialogTitle,
-  Slide,
-  Hidden
-} from '@mui/material';
-import { styled } from '@mui/material/styles';
-import { TransitionProps } from '@mui/material/transitions';
-import SearchTwoToneIcon from '@mui/icons-material/SearchTwoTone';
-import FindInPageTwoToneIcon from '@mui/icons-material/FindInPageTwoTone';
+} from '@mui/material'
+import { styled } from '@mui/material/styles'
+import { TransitionProps } from '@mui/material/transitions'
+import { ChangeEvent, forwardRef, ReactElement, Ref, useState } from 'react'
 
-import ChevronRightTwoToneIcon from '@mui/icons-material/ChevronRightTwoTone';
+import ChevronRightTwoToneIcon from '@mui/icons-material/ChevronRightTwoTone'
 
 const Transition = forwardRef(function Transition(
   props: TransitionProps & { children: ReactElement<any, any> },
   ref: Ref<unknown>
 ) {
-  return <Slide direction="down" ref={ref} {...props} />;
-});
+  return <Slide direction="down" ref={ref} {...props} />
+})
 
 const DialogWrapper = styled(Dialog)(
   () => `
@@ -45,7 +45,7 @@ const DialogWrapper = styled(Dialog)(
         max-height: calc(100vh - 64px)
     }
 `
-);
+)
 
 const SearchInputWrapper = styled(TextField)(
   ({ theme }) => `
@@ -55,40 +55,40 @@ const SearchInputWrapper = styled(TextField)(
         font-size: ${theme.typography.pxToRem(17)};
     }
 `
-);
+)
 
 const DialogTitleWrapper = styled(DialogTitle)(
   ({ theme }) => `
     background: ${theme.colors.alpha.black[5]};
     padding: ${theme.spacing(3)}
 `
-);
+)
 
 function HeaderSearch() {
-  const [openSearchResults, setOpenSearchResults] = useState(false);
-  const [searchValue, setSearchValue] = useState('');
+  const [openSearchResults, setOpenSearchResults] = useState(false)
+  const [searchValue, setSearchValue] = useState('')
 
   const handleSearchChange = (event: ChangeEvent<HTMLInputElement>): void => {
-    setSearchValue(event.target.value);
+    setSearchValue(event.target.value)
 
     if (event.target.value) {
       if (!openSearchResults) {
-        setOpenSearchResults(true);
+        setOpenSearchResults(true)
       }
     } else {
-      setOpenSearchResults(false);
+      setOpenSearchResults(false)
     }
-  };
+  }
 
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false)
 
   const handleClickOpen = () => {
-    setOpen(true);
-  };
+    setOpen(true)
+  }
 
   const handleClose = () => {
-    setOpen(false);
-  };
+    setOpen(false)
+  }
 
   return (
     <>
@@ -117,7 +117,7 @@ function HeaderSearch() {
                 <InputAdornment position="start">
                   <SearchTwoToneIcon />
                 </InputAdornment>
-              )
+              ),
             }}
             placeholder="Search terms here..."
             fullWidth
@@ -155,7 +155,7 @@ function HeaderSearch() {
                     <Avatar
                       sx={{
                         background: (theme: Theme) =>
-                          theme.palette.secondary.main
+                          theme.palette.secondary.main,
                       }}
                     >
                       <FindInPageTwoToneIcon />
@@ -178,7 +178,7 @@ function HeaderSearch() {
                     variant="body2"
                     sx={{
                       color: (theme: Theme) =>
-                        lighten(theme.palette.secondary.main, 0.5)
+                        lighten(theme.palette.secondary.main, 0.5),
                     }}
                   >
                     This page contains all the necessary information for
@@ -194,7 +194,7 @@ function HeaderSearch() {
                     <Avatar
                       sx={{
                         background: (theme: Theme) =>
-                          theme.palette.secondary.main
+                          theme.palette.secondary.main,
                       }}
                     >
                       <FindInPageTwoToneIcon />
@@ -217,7 +217,7 @@ function HeaderSearch() {
                     variant="body2"
                     sx={{
                       color: (theme: Theme) =>
-                        lighten(theme.palette.secondary.main, 0.5)
+                        lighten(theme.palette.secondary.main, 0.5),
                     }}
                   >
                     This is yet another search result pointing to a app page.
@@ -232,7 +232,7 @@ function HeaderSearch() {
                     <Avatar
                       sx={{
                         background: (theme: Theme) =>
-                          theme.palette.secondary.main
+                          theme.palette.secondary.main,
                       }}
                     >
                       <FindInPageTwoToneIcon />
@@ -255,7 +255,7 @@ function HeaderSearch() {
                     variant="body2"
                     sx={{
                       color: (theme: Theme) =>
-                        lighten(theme.palette.secondary.main, 0.5)
+                        lighten(theme.palette.secondary.main, 0.5),
                     }}
                   >
                     Choose if you would like to show or not this typography
@@ -273,7 +273,7 @@ function HeaderSearch() {
         )}
       </DialogWrapper>
     </>
-  );
+  )
 }
 
-export default HeaderSearch;
+export default HeaderSearch

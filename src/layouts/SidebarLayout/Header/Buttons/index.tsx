@@ -1,6 +1,6 @@
-import { Box } from '@mui/material';
-import HeaderSearch from './Search';
-import HeaderNotifications from './Notifications';
+import { Box } from '@mui/material'
+import HeaderNotifications from './Notifications'
+import HeaderSearch from './Search'
 
 function HeaderButtons() {
   return (
@@ -10,7 +10,7 @@ function HeaderButtons() {
         <HeaderNotifications />
       </Box>
     </Box>
-  );
+  )
 }
 
-export default HeaderButtons;
+export default HeaderButtons

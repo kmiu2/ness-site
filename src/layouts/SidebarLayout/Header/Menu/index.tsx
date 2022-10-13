@@ -1,15 +1,15 @@
+import ExpandMoreTwoToneIcon from '@mui/icons-material/ExpandMoreTwoTone'
 import {
   Box,
   List,
   ListItem,
   ListItemText,
   Menu,
-  MenuItem
-} from '@mui/material';
-import { useRef, useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import { styled } from '@mui/material/styles';
-import ExpandMoreTwoToneIcon from '@mui/icons-material/ExpandMoreTwoTone';
+  MenuItem,
+} from '@mui/material'
+import { styled } from '@mui/material/styles'
+import { useRef, useState } from 'react'
+import { NavLink } from 'react-router-dom'
 
 const ListWrapper = styled(Box)(
   ({ theme }) => `
@@ -60,19 +60,19 @@ const ListWrapper = styled(Box)(
             }
         }
 `
-);
+)
 
 function HeaderMenu() {
-  const ref = useRef<any>(null);
-  const [isOpen, setOpen] = useState<boolean>(false);
+  const ref = useRef<any>(null)
+  const [isOpen, setOpen] = useState<boolean>(false)
 
   const handleOpen = (): void => {
-    setOpen(true);
-  };
+    setOpen(true)
+  }
 
   const handleClose = (): void => {
-    setOpen(false);
-  };
+    setOpen(false)
+  }
 
   return (
     <>
@@ -80,8 +80,8 @@ function HeaderMenu() {
         sx={{
           display: {
             xs: 'none',
-            md: 'block'
-          }
+            md: 'block',
+          },
         }}
       >
         <List disablePadding component={Box} display="flex">
@@ -142,7 +142,7 @@ function HeaderMenu() {
         </MenuItem>
       </Menu>
     </>
-  );
+  )
 }
 
-export default HeaderMenu;
+export default HeaderMenu

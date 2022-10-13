@@ -1,19 +1,19 @@
-import { useState, useRef } from 'react';
+import { useRef, useState } from 'react'
 
 import {
   Box,
-  Menu,
-  IconButton,
   Button,
-  ListItemText,
-  ListItem,
+  IconButton,
   List,
-  Typography
-} from '@mui/material';
-import { styled } from '@mui/material/styles';
+  ListItem,
+  ListItemText,
+  Menu,
+  Typography,
+} from '@mui/material'
+import { styled } from '@mui/material/styles'
 
-import DeleteTwoToneIcon from '@mui/icons-material/DeleteTwoTone';
-import MoreVertTwoToneIcon from '@mui/icons-material/MoreVertTwoTone';
+import DeleteTwoToneIcon from '@mui/icons-material/DeleteTwoTone'
+import MoreVertTwoToneIcon from '@mui/icons-material/MoreVertTwoTone'
 
 const ButtonError = styled(Button)(
   ({ theme }) => `
@@ -24,19 +24,19 @@ const ButtonError = styled(Button)(
         background: ${theme.colors.error.dark};
      }
     `
-);
+)
 
 function BulkActions() {
-  const [onMenuOpen, menuOpen] = useState<boolean>(false);
-  const moreRef = useRef<HTMLButtonElement | null>(null);
+  const [onMenuOpen, menuOpen] = useState<boolean>(false)
+  const moreRef = useRef<HTMLButtonElement | null>(null)
 
   const openMenu = (): void => {
-    menuOpen(true);
-  };
+    menuOpen(true)
+  }
 
   const closeMenu = (): void => {
-    menuOpen(false);
-  };
+    menuOpen(false)
+  }
 
   return (
     <>
@@ -70,11 +70,11 @@ function BulkActions() {
         onClose={closeMenu}
         anchorOrigin={{
           vertical: 'center',
-          horizontal: 'center'
+          horizontal: 'center',
         }}
         transformOrigin={{
           vertical: 'center',
-          horizontal: 'center'
+          horizontal: 'center',
         }}
       >
         <List sx={{ p: 1 }} component="nav">
@@ -87,7 +87,7 @@ function BulkActions() {
         </List>
       </Menu>
     </>
-  );
+  )
 }
 
-export default BulkActions;
+export default BulkActions

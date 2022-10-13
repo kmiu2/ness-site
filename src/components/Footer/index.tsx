@@ -1,10 +1,10 @@
-import { Box, Container, Link, Typography, styled } from '@mui/material';
+import { Box, Container, Link, styled, Typography } from '@mui/material'
 
 const FooterWrapper = styled(Container)(
   ({ theme }) => `
         margin-top: ${theme.spacing(4)};
 `
-);
+)
 
 function Footer() {
   return (
@@ -23,7 +23,7 @@ function Footer() {
         </Box>
         <Typography
           sx={{
-            pt: { xs: 2, md: 0 }
+            pt: { xs: 2, md: 0 },
           }}
           variant="subtitle1"
         >
@@ -38,7 +38,7 @@ function Footer() {
         </Typography>
       </Box>
     </FooterWrapper>
-  );
+  )
 }
 
-export default Footer;
+export default Footer

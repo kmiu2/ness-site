@@ -1,13 +1,7 @@
-import { Box, Avatar, Typography, Card, styled, Divider } from '@mui/material';
+import { Avatar, Box, Card, Divider, styled, Typography } from '@mui/material'
 
-import {
-  formatDistance,
-  format,
-  subDays,
-  subHours,
-  subMinutes
-} from 'date-fns';
-import ScheduleTwoToneIcon from '@mui/icons-material/ScheduleTwoTone';
+import ScheduleTwoToneIcon from '@mui/icons-material/ScheduleTwoTone'
+import { format, formatDistance, subDays, subHours, subMinutes } from 'date-fns'
 
 const DividerWrapper = styled(Divider)(
   ({ theme }) => `
@@ -19,7 +13,7 @@ const DividerWrapper = styled(Divider)(
         color: ${theme.colors.alpha.black[50]};
       }
 `
-);
+)
 
 const CardWrapperPrimary = styled(Card)(
   ({ theme }) => `
@@ -31,7 +25,7 @@ const CardWrapperPrimary = styled(Card)(
       max-width: 380px;
       display: inline-flex;
 `
-);
+)
 
 const CardWrapperSecondary = styled(Card)(
   ({ theme }) => `
@@ -43,13 +37,13 @@ const CardWrapperSecondary = styled(Card)(
       max-width: 380px;
       display: inline-flex;
 `
-);
+)
 
 function ChatContent() {
   const user = {
     name: 'Catherine Pike',
-    avatar: '/static/images/avatars/1.jpg'
-  };
+    avatar: '/static/images/avatars/1.jpg',
+  }
 
   return (
     <Box p={3}>
@@ -67,7 +61,7 @@ function ChatContent() {
           variant="rounded"
           sx={{
             width: 50,
-            height: 50
+            height: 50,
           }}
           alt="Zain Baptista"
           src="/static/images/avatars/2.jpg"
@@ -87,17 +81,17 @@ function ChatContent() {
             sx={{
               pt: 1,
               display: 'flex',
-              alignItems: 'center'
+              alignItems: 'center',
             }}
           >
             <ScheduleTwoToneIcon
               sx={{
-                mr: 0.5
+                mr: 0.5,
               }}
               fontSize="small"
             />
             {formatDistance(subHours(new Date(), 115), new Date(), {
-              addSuffix: true
+              addSuffix: true,
             })}
           </Typography>
         </Box>
@@ -125,17 +119,17 @@ function ChatContent() {
             sx={{
               pt: 1,
               display: 'flex',
-              alignItems: 'center'
+              alignItems: 'center',
             }}
           >
             <ScheduleTwoToneIcon
               sx={{
-                mr: 0.5
+                mr: 0.5,
               }}
               fontSize="small"
             />
             {formatDistance(subHours(new Date(), 125), new Date(), {
-              addSuffix: true
+              addSuffix: true,
             })}
           </Typography>
         </Box>
@@ -143,7 +137,7 @@ function ChatContent() {
           variant="rounded"
           sx={{
             width: 50,
-            height: 50
+            height: 50,
           }}
           alt={user.name}
           src={user.avatar}
@@ -169,7 +163,7 @@ function ChatContent() {
           <CardWrapperPrimary>Hey! Are you there?</CardWrapperPrimary>
           <CardWrapperPrimary
             sx={{
-              mt: 2
+              mt: 2,
             }}
           >
             Heeeelloooo????
@@ -179,17 +173,17 @@ function ChatContent() {
             sx={{
               pt: 1,
               display: 'flex',
-              alignItems: 'center'
+              alignItems: 'center',
             }}
           >
             <ScheduleTwoToneIcon
               sx={{
-                mr: 0.5
+                mr: 0.5,
               }}
               fontSize="small"
             />
             {formatDistance(subHours(new Date(), 60), new Date(), {
-              addSuffix: true
+              addSuffix: true,
             })}
           </Typography>
         </Box>
@@ -197,7 +191,7 @@ function ChatContent() {
           variant="rounded"
           sx={{
             width: 50,
-            height: 50
+            height: 50,
           }}
           alt={user.name}
           src={user.avatar}
@@ -214,7 +208,7 @@ function ChatContent() {
           variant="rounded"
           sx={{
             width: 50,
-            height: 50
+            height: 50,
           }}
           alt="Zain Baptista"
           src="/static/images/avatars/2.jpg"
@@ -229,7 +223,7 @@ function ChatContent() {
           <CardWrapperSecondary>Hey there!</CardWrapperSecondary>
           <CardWrapperSecondary
             sx={{
-              mt: 1
+              mt: 1,
             }}
           >
             How are you? Is it ok if I call you?
@@ -239,17 +233,17 @@ function ChatContent() {
             sx={{
               pt: 1,
               display: 'flex',
-              alignItems: 'center'
+              alignItems: 'center',
             }}
           >
             <ScheduleTwoToneIcon
               sx={{
-                mr: 0.5
+                mr: 0.5,
               }}
               fontSize="small"
             />
             {formatDistance(subMinutes(new Date(), 6), new Date(), {
-              addSuffix: true
+              addSuffix: true,
             })}
           </Typography>
         </Box>
@@ -273,7 +267,7 @@ function ChatContent() {
           </CardWrapperPrimary>
           <CardWrapperPrimary
             sx={{
-              mt: 1
+              mt: 1,
             }}
           >
             Can you confirm?
@@ -283,17 +277,17 @@ function ChatContent() {
             sx={{
               pt: 1,
               display: 'flex',
-              alignItems: 'center'
+              alignItems: 'center',
             }}
           >
             <ScheduleTwoToneIcon
               sx={{
-                mr: 0.5
+                mr: 0.5,
               }}
               fontSize="small"
             />
             {formatDistance(subMinutes(new Date(), 8), new Date(), {
-              addSuffix: true
+              addSuffix: true,
             })}
           </Typography>
         </Box>
@@ -301,14 +295,14 @@ function ChatContent() {
           variant="rounded"
           sx={{
             width: 50,
-            height: 50
+            height: 50,
           }}
           alt={user.name}
           src={user.avatar}
         />
       </Box>
     </Box>
-  );
+  )
 }
 
-export default ChatContent;
+export default ChatContent

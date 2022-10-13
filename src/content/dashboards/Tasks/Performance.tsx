@@ -1,22 +1,22 @@
+import AssignmentTurnedInTwoToneIcon from '@mui/icons-material/AssignmentTurnedInTwoTone'
+import CancelPresentationTwoToneIcon from '@mui/icons-material/CancelPresentationTwoTone'
 import {
-  Card,
-  Box,
-  CardContent,
-  Typography,
   Avatar,
-  useTheme,
+  Box,
+  Card,
+  CardContent,
   LinearProgress,
-  styled
-} from '@mui/material';
-import AssignmentTurnedInTwoToneIcon from '@mui/icons-material/AssignmentTurnedInTwoTone';
-import CancelPresentationTwoToneIcon from '@mui/icons-material/CancelPresentationTwoTone';
+  styled,
+  Typography,
+  useTheme,
+} from '@mui/material'
 
 const RootWrapper = styled(Card)(
   ({ theme }) => `
     background: ${theme.colors.gradients.green1};
     color: ${theme.colors.alpha.white[100]};
 `
-);
+)
 
 const AvatarSuccess = styled(Avatar)(
   ({ theme }) => `
@@ -26,7 +26,7 @@ const AvatarSuccess = styled(Avatar)(
       height: ${theme.spacing(8)};
       box-shadow: ${theme.colors.shadows.success};
 `
-);
+)
 
 const AvatarError = styled(Avatar)(
   ({ theme }) => `
@@ -36,13 +36,13 @@ const AvatarError = styled(Avatar)(
       height: ${theme.spacing(8)};
       box-shadow: ${theme.colors.shadows.error};
 `
-);
+)
 
 const TypographySecondary = styled(Typography)(
   ({ theme }) => `
       color: ${theme.colors.alpha.white[70]};
 `
-);
+)
 
 const LinearProgressWrapper = styled(LinearProgress)(
   ({ theme }) => `
@@ -57,15 +57,15 @@ const LinearProgressWrapper = styled(LinearProgress)(
           border-bottom-right-radius: ${theme.general.borderRadius};
         }
 `
-);
+)
 
 function Performance() {
-  const theme = useTheme();
+  const theme = useTheme()
 
   return (
     <RootWrapper
       sx={{
-        p: 2
+        p: 2,
       }}
     >
       <Typography
@@ -75,7 +75,7 @@ function Performance() {
           pb: 1,
           pt: 2,
           fontSize: `${theme.typography.pxToRem(23)}`,
-          color: `${theme.colors.alpha.white[100]}`
+          color: `${theme.colors.alpha.white[100]}`,
         }}
       >
         Performance
@@ -85,13 +85,13 @@ function Performance() {
           display="flex"
           sx={{
             px: 2,
-            pb: 3
+            pb: 3,
           }}
           alignItems="center"
         >
           <AvatarSuccess
             sx={{
-              mr: 2
+              mr: 2,
             }}
             variant="rounded"
           >
@@ -108,13 +108,13 @@ function Performance() {
           display="flex"
           sx={{
             px: 2,
-            pb: 3
+            pb: 3,
           }}
           alignItems="center"
         >
           <AvatarError
             sx={{
-              mr: 2
+              mr: 2,
             }}
             variant="rounded"
           >
@@ -136,7 +136,7 @@ function Performance() {
         </Box>
       </CardContent>
     </RootWrapper>
-  );
+  )
 }
 
-export default Performance;
+export default Performance

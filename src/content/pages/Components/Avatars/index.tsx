@@ -17,13 +17,13 @@ import Footer from '../../../../components/Footer'
 import PageTitle from '../../../../components/PageTitle'
 import PageTitleWrapper from '../../../../components/PageTitleWrapper'
 
-function stringToColor(string: string) {
+function stringToColor(s: string) {
   let hash = 0
   let i
 
   /* eslint-disable no-bitwise */
-  for (i = 0; i < string.length; i += 1) {
-    hash = string.charCodeAt(i) + ((hash << 5) - hash)
+  for (i = 0; i < s.length; i += 1) {
+    hash = s.charCodeAt(i) + ((hash << 5) - hash)
   }
 
   let color = '#'

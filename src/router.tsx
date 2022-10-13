@@ -73,14 +73,14 @@ const routes: RouteObject[] = [
       },
       {
         path: 'overview',
-        element: <Navigate to="/" replace />,
+        element: <Navigate to="/" replace={true} />,
       },
       {
         path: 'status',
         children: [
           {
             path: '',
-            element: <Navigate to="404" replace />,
+            element: <Navigate to="404" replace={true} />,
           },
           {
             path: '404',
@@ -112,7 +112,7 @@ const routes: RouteObject[] = [
     children: [
       {
         path: '',
-        element: <Navigate to="tasks" replace />,
+        element: <Navigate to="tasks" replace={true} />,
       },
       {
         path: 'tasks',
@@ -130,7 +130,7 @@ const routes: RouteObject[] = [
     children: [
       {
         path: '',
-        element: <Navigate to="transactions" replace />,
+        element: <Navigate to="transactions" replace={true} />,
       },
       {
         path: 'transactions',
@@ -141,7 +141,7 @@ const routes: RouteObject[] = [
         children: [
           {
             path: '',
-            element: <Navigate to="details" replace />,
+            element: <Navigate to="details" replace={true} />,
           },
           {
             path: 'details',
@@ -161,7 +161,7 @@ const routes: RouteObject[] = [
     children: [
       {
         path: '',
-        element: <Navigate to="buttons" replace />,
+        element: <Navigate to="buttons" replace={true} />,
       },
       {
         path: 'buttons',

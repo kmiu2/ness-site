@@ -86,7 +86,7 @@ function Sidebar() {
             variant="contained"
             color="success"
             size="small"
-            fullWidth
+            fullWidth={true}
           >
             Upgrade to PRO
           </Button>

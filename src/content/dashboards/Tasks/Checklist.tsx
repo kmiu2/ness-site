@@ -1,24 +1,24 @@
+import AccountTreeTwoToneIcon from '@mui/icons-material/AccountTreeTwoTone'
+import AssignmentTwoToneIcon from '@mui/icons-material/AssignmentTwoTone'
+import BusinessCenterTwoToneIcon from '@mui/icons-material/BusinessCenterTwoTone'
+import RefreshTwoToneIcon from '@mui/icons-material/RefreshTwoTone'
+import Timeline from '@mui/lab/Timeline'
+import TimelineConnector from '@mui/lab/TimelineConnector'
+import TimelineContent from '@mui/lab/TimelineContent'
+import TimelineDot from '@mui/lab/TimelineDot'
+import TimelineItem from '@mui/lab/TimelineItem'
+import TimelineSeparator from '@mui/lab/TimelineSeparator'
 import {
   Box,
   CardHeader,
-  Typography,
-  IconButton,
-  FormControlLabel,
   Checkbox,
+  FormControlLabel,
   FormGroup,
+  IconButton,
+  styled,
   Tooltip,
-  styled
-} from '@mui/material';
-import Timeline from '@mui/lab/Timeline';
-import TimelineItem from '@mui/lab/TimelineItem';
-import TimelineSeparator from '@mui/lab/TimelineSeparator';
-import TimelineConnector from '@mui/lab/TimelineConnector';
-import TimelineContent from '@mui/lab/TimelineContent';
-import TimelineDot from '@mui/lab/TimelineDot';
-import RefreshTwoToneIcon from '@mui/icons-material/RefreshTwoTone';
-import AssignmentTwoToneIcon from '@mui/icons-material/AssignmentTwoTone';
-import AccountTreeTwoToneIcon from '@mui/icons-material/AccountTreeTwoTone';
-import BusinessCenterTwoToneIcon from '@mui/icons-material/BusinessCenterTwoTone';
+  Typography,
+} from '@mui/material'
 
 const TimelineWrapper = styled(Timeline)(
   ({ theme }) => `
@@ -42,13 +42,13 @@ const TimelineWrapper = styled(Timeline)(
       color: ${theme.colors.alpha.black[50]};
     }
 `
-);
+)
 
 const CheckboxWrapper = styled(Checkbox)(
   ({ theme }) => `
     padding: ${theme.spacing(0.5)};
 `
-);
+)
 
 function Checklist() {
   return (
@@ -56,7 +56,7 @@ function Checklist() {
       <CardHeader
         sx={{
           px: 0,
-          pt: 0
+          pt: 0,
         }}
         action={
           <Tooltip arrow title="Refresh list">
@@ -79,7 +79,7 @@ function Checklist() {
             <Typography
               variant="h4"
               sx={{
-                pb: 2
+                pb: 2,
               }}
             >
               "Tasks Quick List"
@@ -111,7 +111,7 @@ function Checklist() {
             <Typography
               variant="h4"
               sx={{
-                pb: 2
+                pb: 2,
               }}
             >
               "Project Management"
@@ -139,7 +139,7 @@ function Checklist() {
             <Typography
               variant="h4"
               sx={{
-                pb: 2
+                pb: 2,
               }}
             >
               "Business & Marketing"
@@ -158,7 +158,7 @@ function Checklist() {
         </TimelineItem>
       </TimelineWrapper>
     </Box>
-  );
+  )
 }
 
-export default Checklist;
+export default Checklist

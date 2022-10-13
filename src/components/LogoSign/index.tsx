@@ -1,13 +1,13 @@
 import {
-  Box,
-  Tooltip,
   Badge,
-  TooltipProps,
-  tooltipClasses,
+  Box,
   styled,
-  useTheme
-} from '@mui/material';
-import { Link } from 'react-router-dom';
+  Tooltip,
+  tooltipClasses,
+  TooltipProps,
+  useTheme,
+} from '@mui/material'
+import { Link } from 'react-router-dom'
 
 const LogoWrapper = styled(Link)(
   ({ theme }) => `
@@ -18,14 +18,14 @@ const LogoWrapper = styled(Link)(
         margin: 0 auto;
         font-weight: ${theme.typography.fontWeightBold};
 `
-);
+)
 
 const LogoSignWrapper = styled(Box)(
   () => `
         width: 52px;
         height: 38px;
 `
-);
+)
 
 const LogoSign = styled(Box)(
   ({ theme }) => `
@@ -62,7 +62,7 @@ const LogoSign = styled(Box)(
             background: ${theme.palette.secondary.main};
         }
 `
-);
+)
 
 const LogoSignInner = styled(Box)(
   ({ theme }) => `
@@ -75,7 +75,7 @@ const LogoSignInner = styled(Box)(
         border-radius: ${theme.general.borderRadiusSm};
         background: ${theme.header.background};
 `
-);
+)
 
 const TooltipWrapper = styled(({ className, ...props }: TooltipProps) => (
   <Tooltip {...props} classes={{ popper: className }} />
@@ -87,15 +87,15 @@ const TooltipWrapper = styled(({ className, ...props }: TooltipProps) => (
     fontWeight: 'bold',
     borderRadius: theme.general.borderRadiusSm,
     boxShadow:
-      '0 .2rem .8rem rgba(7,9,25,.18), 0 .08rem .15rem rgba(7,9,25,.15)'
+      '0 .2rem .8rem rgba(7,9,25,.18), 0 .08rem .15rem rgba(7,9,25,.15)',
   },
   [`& .${tooltipClasses.arrow}`]: {
-    color: theme.colors.alpha.trueWhite[100]
-  }
-}));
+    color: theme.colors.alpha.trueWhite[100],
+  },
+}))
 
 function Logo() {
-  const theme = useTheme();
+  const theme = useTheme()
 
   return (
     <TooltipWrapper
@@ -108,8 +108,8 @@ function Logo() {
             '.MuiBadge-badge': {
               fontSize: theme.typography.pxToRem(11),
               right: -2,
-              top: 8
-            }
+              top: 8,
+            },
           }}
           overlap="circular"
           color="success"
@@ -123,7 +123,7 @@ function Logo() {
         </Badge>
       </LogoWrapper>
     </TooltipWrapper>
-  );
+  )
 }
 
-export default Logo;
+export default Logo

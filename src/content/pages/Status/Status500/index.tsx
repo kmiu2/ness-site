@@ -1,22 +1,22 @@
-import { useState } from 'react';
+import RefreshTwoToneIcon from '@mui/icons-material/RefreshTwoTone'
+import LoadingButton from '@mui/lab/LoadingButton'
 import {
   Box,
-  Typography,
-  Hidden,
-  Container,
   Button,
+  Container,
   Grid,
-  styled
-} from '@mui/material';
-import { Helmet } from 'react-helmet-async';
-import RefreshTwoToneIcon from '@mui/icons-material/RefreshTwoTone';
-import LoadingButton from '@mui/lab/LoadingButton';
+  Hidden,
+  styled,
+  Typography,
+} from '@mui/material'
+import { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 
 const GridWrapper = styled(Grid)(
   ({ theme }) => `
     background: ${theme.colors.gradients.black1};
 `
-);
+)
 
 const MainContent = styled(Box)(
   () => `
@@ -28,24 +28,24 @@ const MainContent = styled(Box)(
     align-items: center;
     justify-content: center;
 `
-);
+)
 
 const TypographyPrimary = styled(Typography)(
   ({ theme }) => `
       color: ${theme.colors.alpha.white[100]};
 `
-);
+)
 
 const TypographySecondary = styled(Typography)(
   ({ theme }) => `
       color: ${theme.colors.alpha.white[70]};
 `
-);
+)
 
 function Status500() {
-  const [pending, setPending] = useState(false);
+  const [pending, setPending] = useState(false)
   function handleClick() {
-    setPending(true);
+    setPending(true)
   }
 
   return (
@@ -135,7 +135,7 @@ function Status500() {
         </Grid>
       </MainContent>
     </>
-  );
+  )
 }
 
-export default Status500;
+export default Status500

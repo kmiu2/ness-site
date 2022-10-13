@@ -1,17 +1,17 @@
+import SearchTwoToneIcon from '@mui/icons-material/SearchTwoTone'
 import {
   Box,
+  Button,
   Card,
-  Typography,
   Container,
   Divider,
-  Button,
   FormControl,
-  OutlinedInput,
   InputAdornment,
-  styled
-} from '@mui/material';
-import { Helmet } from 'react-helmet-async';
-import SearchTwoToneIcon from '@mui/icons-material/SearchTwoTone';
+  OutlinedInput,
+  styled,
+  Typography,
+} from '@mui/material'
+import { Helmet } from 'react-helmet-async'
 
 const MainContent = styled(Box)(
   ({ theme }) => `
@@ -23,19 +23,19 @@ const MainContent = styled(Box)(
     align-items: center;
     justify-content: center;
 `
-);
+)
 
 const OutlinedInputWrapper = styled(OutlinedInput)(
   ({ theme }) => `
     background-color: ${theme.colors.alpha.white[100]};
 `
-);
+)
 
 const ButtonSearch = styled(Button)(
   ({ theme }) => `
     margin-right: -${theme.spacing(1)};
 `
-);
+)
 
 function Status404() {
   return (
@@ -89,7 +89,7 @@ function Status404() {
         </Container>
       </MainContent>
     </>
-  );
+  )
 }
 
-export default Status404;
+export default Status404

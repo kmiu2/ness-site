@@ -1,9 +1,9 @@
-import { FC, ReactNode } from 'react';
-import PropTypes from 'prop-types';
-import { styled } from '@mui/material/styles';
+import { styled } from '@mui/material/styles'
+import PropTypes from 'prop-types'
+import { FC, ReactNode } from 'react'
 
 interface LabelProps {
-  className?: string;
+  className?: string
   color?:
     | 'primary'
     | 'black'
@@ -11,8 +11,8 @@ interface LabelProps {
     | 'error'
     | 'warning'
     | 'success'
-    | 'info';
-  children?: ReactNode;
+    | 'info'
+  children?: ReactNode
 }
 
 const LabelWrapper = styled('span')(
@@ -63,7 +63,7 @@ const LabelWrapper = styled('span')(
         }
       }
 `
-);
+)
 
 const Label: FC<LabelProps> = ({
   className,
@@ -75,8 +75,8 @@ const Label: FC<LabelProps> = ({
     <LabelWrapper className={'MuiLabel-' + color} {...rest}>
       {children}
     </LabelWrapper>
-  );
-};
+  )
+}
 
 Label.propTypes = {
   children: PropTypes.node,
@@ -88,8 +88,8 @@ Label.propTypes = {
     'error',
     'warning',
     'success',
-    'info'
-  ])
-};
+    'info',
+  ]),
+}
 
-export default Label;
+export default Label

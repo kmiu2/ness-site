@@ -5,7 +5,7 @@ import {
   CardContent,
   Divider,
   Grid,
-  Typography,
+  Typography
 } from '@mui/material'
 
 import DoneTwoToneIcon from '@mui/icons-material/DoneTwoTone'
