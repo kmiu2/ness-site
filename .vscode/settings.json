@@ -6,8 +6,5 @@
     "package-lock.json": true,
     "tsconfig.json": true
   },
-  "editor.codeActionsOnSave": {
-    "source.organizeImports": true
-  },
   "cSpell.words": ["amannn", "precache", "precached", "precaching", "stylelint"]
 }
