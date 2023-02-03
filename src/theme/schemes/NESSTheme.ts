@@ -129,7 +129,7 @@ const colors = {
   },
 }
 
-export const NebulaFighterTheme = createTheme({
+export const NESSTheme = createTheme({
   // direction: i18n.dir(),
   colors: {
     gradients: {
