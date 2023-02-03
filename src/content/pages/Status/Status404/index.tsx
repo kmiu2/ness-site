@@ -1,20 +1,8 @@
-import SearchTwoToneIcon from '@mui/icons-material/SearchTwoTone'
-import {
-  Box,
-  Button,
-  Card,
-  Container,
-  Divider,
-  FormControl,
-  InputAdornment,
-  OutlinedInput,
-  styled,
-  Typography,
-} from '@mui/material'
+import { Box, Button, Card, Container, styled, Typography } from '@mui/material'
 import { Helmet } from 'react-helmet-async'
 
 const MainContent = styled(Box)(
-  ({ theme }) => `
+  () => `
     height: 100%;
     display: flex;
     flex: 1;
@@ -22,18 +10,6 @@ const MainContent = styled(Box)(
     flex-direction: column;
     align-items: center;
     justify-content: center;
-`
-)
-
-const OutlinedInputWrapper = styled(OutlinedInput)(
-  ({ theme }) => `
-    background-color: ${theme.colors.alpha.white[100]};
-`
-)
-
-const ButtonSearch = styled(Button)(
-  ({ theme }) => `
-    margin-right: -${theme.spacing(1)};
 `
 )
 
@@ -62,25 +38,6 @@ function Status404() {
           </Box>
           <Container maxWidth="sm">
             <Card sx={{ textAlign: 'center', mt: 3, p: 4 }}>
-              <FormControl variant="outlined" fullWidth>
-                <OutlinedInputWrapper
-                  type="text"
-                  placeholder="Search terms here..."
-                  endAdornment={
-                    <InputAdornment position="end">
-                      <ButtonSearch variant="contained" size="small">
-                        Search
-                      </ButtonSearch>
-                    </InputAdornment>
-                  }
-                  startAdornment={
-                    <InputAdornment position="start">
-                      <SearchTwoToneIcon />
-                    </InputAdornment>
-                  }
-                />
-              </FormControl>
-              <Divider sx={{ my: 4 }}>OR</Divider>
               <Button href="/" variant="outlined">
                 Go to homepage
               </Button>

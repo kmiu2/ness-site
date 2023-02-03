@@ -1,5 +1,4 @@
 import { useContext } from 'react'
-
 import CloseTwoToneIcon from '@mui/icons-material/CloseTwoTone'
 import MenuTwoToneIcon from '@mui/icons-material/MenuTwoTone'
 import {
@@ -13,9 +12,7 @@ import {
   useTheme,
 } from '@mui/material'
 import { SidebarContext } from '../../../contexts/SidebarContext'
-
 import HeaderButtons from './Buttons'
-import HeaderUserbox from './Userbox'
 
 const HeaderWrapper = styled(Box)(
   ({ theme }) => `
@@ -67,7 +64,6 @@ function Header() {
       </Box>
       <Box display="flex" alignItems="center">
         <HeaderButtons />
-        <HeaderUserbox />
         <Box
           component="span"
           sx={{

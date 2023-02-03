@@ -1,6 +1,5 @@
 import { styled } from '@mui/material'
 import { Link } from 'react-router-dom'
-import logo from '../../assets/logos/ness-logo.png'
 
 const LogoWrapper = styled(Link)(
   ({ theme }) => `
@@ -16,7 +15,12 @@ const LogoWrapper = styled(Link)(
 function Logo() {
   return (
     <LogoWrapper to="/overview">
-      <img src={logo} alt="logo" height="100%" width="100%" />
+      <img
+        src="/assets/logos/ness-logo.png"
+        alt="logo"
+        height="100%"
+        width="100%"
+      />
     </LogoWrapper>
   )
 }

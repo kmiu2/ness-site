@@ -1,14 +1,24 @@
-import { Box } from '@mui/material'
-import HeaderNotifications from './Notifications'
-import HeaderSearch from './Search'
+import { Box, IconButton, Tooltip } from '@mui/material'
+import { Instagram } from '@mui/icons-material'
 
 function HeaderButtons() {
   return (
     <Box sx={{ mr: 1 }}>
-      <HeaderSearch />
-      <Box sx={{ mx: 0.5 }} component="span">
-        <HeaderNotifications />
-      </Box>
+      <Tooltip arrow title="Discord">
+        <IconButton color="primary" onClick={() => {}}>
+          <img
+            src="/assets/icons/discord.svg"
+            alt="Discord"
+            height="20px"
+            width="20px"
+          />
+        </IconButton>
+      </Tooltip>
+      <Tooltip arrow title="Instagram">
+        <IconButton color="primary" onClick={() => {}}>
+          <Instagram />
+        </IconButton>
+      </Tooltip>
     </Box>
   )
 }

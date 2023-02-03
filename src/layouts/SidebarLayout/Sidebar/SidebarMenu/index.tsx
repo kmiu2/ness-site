@@ -1,5 +1,4 @@
 import { useContext } from 'react'
-
 import {
   alpha,
   Box,
@@ -12,8 +11,13 @@ import {
 } from '@mui/material'
 import { NavLink as RouterLink } from 'react-router-dom'
 import { SidebarContext } from '../../../../contexts/SidebarContext'
-
-import DesignServicesTwoToneIcon from '@mui/icons-material/DesignServicesTwoTone'
+import {
+  HomeTwoTone,
+  AccountTreeTwoTone,
+  RuleTwoTone,
+  LanguageTwoTone,
+  EmailTwoTone,
+} from '@mui/icons-material'
 
 const MenuWrapper = styled(Box)(
   ({ theme }) => `
@@ -172,7 +176,7 @@ function SidebarMenu() {
                   component={RouterLink}
                   onClick={closeSidebar}
                   to="/"
-                  startIcon={<DesignServicesTwoToneIcon />}
+                  startIcon={<HomeTwoTone />}
                 >
                   Home
                 </Button>
@@ -196,7 +200,7 @@ function SidebarMenu() {
                   component={RouterLink}
                   onClick={closeSidebar}
                   to="/courses.png"
-                  startIcon={<DesignServicesTwoToneIcon />}
+                  startIcon={<AccountTreeTwoTone />}
                 >
                   Course Map
                 </Button>
@@ -211,7 +215,7 @@ function SidebarMenu() {
                   <Button
                     disableRipple
                     onClick={closeSidebar}
-                    startIcon={<DesignServicesTwoToneIcon />}
+                    startIcon={<RuleTwoTone />}
                   >
                     Prerequisite Checker
                   </Button>
@@ -240,7 +244,7 @@ function SidebarMenu() {
                   <Button
                     disableRipple
                     onClick={closeSidebar}
-                    startIcon={<DesignServicesTwoToneIcon />}
+                    startIcon={<LanguageTwoTone />}
                   >
                     UWaterloo Site
                   </Button>
@@ -256,7 +260,7 @@ function SidebarMenu() {
                   <Button
                     disableRipple
                     onClick={closeSidebar}
-                    startIcon={<DesignServicesTwoToneIcon />}
+                    startIcon={<EmailTwoTone />}
                   >
                     Email Us
                   </Button>
