@@ -8,7 +8,6 @@
     "target": "es5"
   },
   "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
-  "jsRules": {},
   "linterOptions": {
     "exclude": [
       "config/**/*.js",
@@ -17,7 +16,8 @@
     ]
   },
   "rules": {
-    "prettier": true
+    "prettier": true,
+    "jsx-boolean-value": false
   },
   "rulesDirectory": ["tslint-plugin-prettier"]
 }
