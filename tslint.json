@@ -1,15 +1,23 @@
 {
-  "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
-  "jsRules": {},
-  "rules": {
-    "prettier": true
+  "compilerOptions": {
+    "allowJs": true,
+    "jsx": "react",
+    "module": "es6",
+    "moduleResolution": "node",
+    "outDir": "./www/",
+    "target": "es5"
   },
+  "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
   "linterOptions": {
     "exclude": [
       "config/**/*.js",
       "node_modules/**/*.ts",
       "coverage/lcov-report/*.js"
     ]
+  },
+  "rules": {
+    "prettier": true,
+    "jsx-boolean-value": false
   },
   "rulesDirectory": ["tslint-plugin-prettier"]
 }

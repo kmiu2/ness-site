@@ -1,12 +1,28 @@
 # The NESS Site
 
+## Recommended Setup
+
+Download [VSCode](https://code.visualstudio.com/download) and install Prettier
+
 ## Getting Started
 
-Run the site
+Install npm packages
 
 ```bash
 $ npm i
-$ npm run start
+```
+
+Run the site locally
+
+```bash
+$ npm run dev
+```
+
+Running production build
+
+```bash
+$ npm run build
+$ npm run serve
 ```
 
 ## Deployment
@@ -29,3 +45,18 @@ Run build
 $ git pull
 $ npm run build
 ```
+
+Finally check out the [live NESS site](https://ness.uwaterloo.ca/)
+
+## Linting
+
+Lint the code with the npm lint commands
+
+```bash
+$ npm run lint:ts
+$ npm run lint:css
+```
+
+## GitHub Practices
+
+Try to use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
