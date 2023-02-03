@@ -5,8 +5,8 @@
   "scripts": {
     "start": "react-scripts start",
     "dev": "react-scripts start --port 3000",
-    "prod": "serve -s ./www",
-    "build": "webpack --config webpack.config.js",
+    "serve": "serve -s ./www",
+    "build": "BUILD_PATH=www react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint:ts": "tslint 'src/**/*.{ts,tsx,js}'",
