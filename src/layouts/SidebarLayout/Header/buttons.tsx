@@ -5,7 +5,12 @@ function HeaderButtons() {
   return (
     <Box sx={{ mr: 1 }}>
       <Tooltip arrow title="Discord">
-        <IconButton color="primary" onClick={() => {}}>
+        <IconButton
+          color="primary"
+          onClick={() => {
+            window.open('https://discord.gg/XcwxXkdexV', '_blank')
+          }}
+        >
           <img
             src="/assets/icons/discord.svg"
             alt="Discord"
@@ -15,7 +20,12 @@ function HeaderButtons() {
         </IconButton>
       </Tooltip>
       <Tooltip arrow title="Instagram">
-        <IconButton color="primary" onClick={() => {}}>
+        <IconButton
+          color="primary"
+          onClick={() => {
+            window.open('https://www.instagram.com/uw_ness/', '_blank')
+          }}
+        >
           <Instagram />
         </IconButton>
       </Tooltip>

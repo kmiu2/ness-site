@@ -11,7 +11,7 @@ import {
 } from '@mui/icons-material'
 import { MenuWrapper, SubMenuWrapper } from './styles'
 
-function SidebarMenu() {
+function Options() {
   const { closeSidebar } = useContext(SidebarContext)
 
   return (
@@ -45,15 +45,20 @@ function SidebarMenu() {
           <SubMenuWrapper>
             <List component="div">
               <ListItem component="div">
-                <Button
-                  disableRipple
-                  component={RouterLink}
-                  onClick={closeSidebar}
-                  to="/courses.png"
-                  startIcon={<AccountTreeTwoTone />}
+                <Link
+                  href="/courses.png"
+                  target="_blank"
+                  width="100%"
+                  underline="none"
                 >
-                  Course Map
-                </Button>
+                  <Button
+                    disableRipple
+                    onClick={closeSidebar}
+                    startIcon={<AccountTreeTwoTone />}
+                  >
+                    Course Map
+                  </Button>
+                </Link>
               </ListItem>
               <ListItem component="div">
                 <Link
@@ -124,4 +129,4 @@ function SidebarMenu() {
   )
 }
 
-export default SidebarMenu
+export default Options

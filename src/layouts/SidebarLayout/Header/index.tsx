@@ -1,43 +1,16 @@
 import { useContext } from 'react'
 import CloseTwoToneIcon from '@mui/icons-material/CloseTwoTone'
 import MenuTwoToneIcon from '@mui/icons-material/MenuTwoTone'
-import {
-  alpha,
-  Box,
-  IconButton,
-  lighten,
-  Tooltip,
-  Typography,
-  useTheme,
-} from '@mui/material'
+import { Box, IconButton, Tooltip, Typography } from '@mui/material'
 import { SidebarContext } from '../../../contexts/SidebarContext'
 import HeaderButtons from './buttons'
 import { HeaderWrapper } from './styles'
 
 function Header() {
   const { sidebarToggle, toggleSidebar } = useContext(SidebarContext)
-  const theme = useTheme()
 
   return (
-    <HeaderWrapper
-      display="flex"
-      alignItems="center"
-      sx={{
-        boxShadow:
-          theme.palette.mode === 'dark'
-            ? `0 1px 0 ${alpha(
-                lighten(theme.colors.primary.main, 0.7),
-                0.15
-              )}, 0px 2px 8px -3px rgba(0, 0, 0, 0.2), 0px 5px 22px -4px rgba(0, 0, 0, .1)`
-            : `0px 2px 8px -3px ${alpha(
-                theme.colors.alpha.black[100],
-                0.2
-              )}, 0px 5px 22px -4px ${alpha(
-                theme.colors.alpha.black[100],
-                0.1
-              )}`,
-      }}
-    >
+    <HeaderWrapper display="flex" alignItems="center">
       <Box display="flex" alignItems="center" paddingLeft="1%">
         <Typography variant="h3" component="h3">
           NESS

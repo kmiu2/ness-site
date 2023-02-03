@@ -8,7 +8,7 @@ const themeColors = {
   warning: '#FFA319',
   error: '#FF1943',
   info: '#33C2FF',
-  black: '#CBCCD2',
+  black: '#f4f4f4',
   white: '#2E55A1',
   primaryAlt: '#2E55A1',
   trueWhite: '#ffffff',
@@ -228,7 +228,7 @@ export const NESSTheme = createTheme({
     borderRadiusXl: '16px',
   },
   sidebar: {
-    background: colors.layout.sidebar.background,
+    background: darken(colors.layout.sidebar.background, 0.5),
     textColor: colors.layout.sidebar.textColor,
     dividerBg: colors.layout.sidebar.dividerBg,
     menuItemColor: colors.layout.sidebar.menuItemColor,
@@ -243,7 +243,7 @@ export const NESSTheme = createTheme({
   },
   header: {
     height: '80px',
-    background: themeColors.primaryAlt,
+    background: darken(themeColors.primaryAlt, 0.25),
     boxShadow: '0px 1px 0px #272C48',
     textColor: colors.secondary.main,
   },
@@ -412,16 +412,6 @@ export const NESSTheme = createTheme({
         },
       },
     },
-    MuiSelect: {
-      styleOverrides: {
-        iconOutlined: {
-          color: colors.alpha.black[50],
-        },
-        icon: {
-          top: 'calc(50% - 14px)',
-        },
-      },
-    },
     MuiOutlinedInput: {
       styleOverrides: {
         root: {
@@ -445,114 +435,6 @@ export const NESSTheme = createTheme({
           fontSize: 13,
           background: colors.alpha.black[5],
           color: colors.alpha.black[70],
-        },
-      },
-    },
-    MuiCardHeader: {
-      styleOverrides: {
-        action: {
-          marginTop: -5,
-          marginBottom: -5,
-        },
-        title: {
-          fontSize: 15,
-        },
-      },
-    },
-    MuiRadio: {
-      styleOverrides: {
-        root: {
-          borderRadius: '50px',
-        },
-      },
-    },
-    MuiChip: {
-      styleOverrides: {
-        colorSecondary: {
-          background: colors.alpha.black[5],
-          color: colors.alpha.black[100],
-
-          '&:hover': {
-            background: colors.alpha.black[10],
-          },
-        },
-        deleteIcon: {
-          color: colors.alpha.black[50],
-
-          '&:hover': {
-            color: colors.alpha.black[70],
-          },
-        },
-      },
-    },
-    MuiAccordion: {
-      styleOverrides: {
-        root: {
-          boxShadow: 'none',
-
-          '&.Mui-expanded': {
-            margin: 0,
-          },
-          '&::before': {
-            display: 'none',
-          },
-        },
-      },
-    },
-    MuiAvatar: {
-      styleOverrides: {
-        root: {
-          fontSize: 14,
-          fontWeight: 'bold',
-        },
-        colorDefault: {
-          background: colors.alpha.black[30],
-          color: colors.alpha.trueWhite[100],
-        },
-      },
-    },
-    MuiAvatarGroup: {
-      styleOverrides: {
-        root: {
-          alignItems: 'center',
-        },
-        avatar: {
-          background: colors.alpha.black[10],
-          fontSize: 13,
-          color: colors.alpha.black[70],
-          fontWeight: 'bold',
-
-          '&:first-of-type': {
-            border: 0,
-            background: 'transparent',
-          },
-        },
-      },
-    },
-    MuiListItemAvatar: {
-      styleOverrides: {
-        alignItemsFlexStart: {
-          marginTop: 0,
-        },
-      },
-    },
-    MuiPaginationItem: {
-      styleOverrides: {
-        page: {
-          fontSize: 13,
-          fontWeight: 'bold',
-          transition: 'all .2s',
-        },
-        textPrimary: {
-          '&.Mui-selected': {
-            boxShadow: colors.shadows.primary,
-          },
-          '&.MuiButtonBase-root:hover': {
-            background: colors.alpha.black[5],
-          },
-          '&.Mui-selected.MuiButtonBase-root:hover': {
-            background: colors.primary.main,
-          },
         },
       },
     },
@@ -728,28 +610,6 @@ export const NESSTheme = createTheme({
         underline: 'hover',
       },
     },
-    MuiLinearProgress: {
-      styleOverrides: {
-        root: {
-          borderRadius: 6,
-          height: 6,
-        },
-      },
-    },
-    MuiSlider: {
-      styleOverrides: {
-        root: {
-          '& .MuiSlider-valueLabelCircle, .MuiSlider-valueLabelLabel': {
-            transform: 'none',
-          },
-          '& .MuiSlider-valueLabel': {
-            borderRadius: 6,
-            background: colors.alpha.black[100],
-            color: colors.alpha.white[100],
-          },
-        },
-      },
-    },
     MuiList: {
       styleOverrides: {
         root: {
@@ -782,51 +642,6 @@ export const NESSTheme = createTheme({
           '& .MuiListItem-button': {
             borderRadius: 6,
             margin: '1px 0',
-          },
-        },
-      },
-    },
-    MuiTabs: {
-      styleOverrides: {
-        root: {
-          height: 38,
-          minHeight: 38,
-          overflow: 'visible',
-        },
-        indicator: {
-          height: 38,
-          minHeight: 38,
-          borderRadius: 6,
-          border: '1px solid ' + colors.primary.dark,
-          boxShadow: '0px 2px 10px ' + colors.primary.light,
-        },
-        scrollableX: {
-          overflow: 'visible !important',
-        },
-      },
-    },
-    MuiTab: {
-      styleOverrides: {
-        root: {
-          padding: 0,
-          height: 38,
-          minHeight: 38,
-          borderRadius: 6,
-          transition: 'color .2s',
-          textTransform: 'capitalize',
-
-          '&.MuiButtonBase-root': {
-            minWidth: 'auto',
-            paddingLeft: 20,
-            paddingRight: 20,
-            marginRight: 4,
-          },
-          '&.Mui-selected, &.Mui-selected:hover': {
-            color: colors.alpha.trueWhite[100],
-            zIndex: 5,
-          },
-          '&:hover': {
-            color: colors.alpha.trueWhite[70],
           },
         },
       },
@@ -888,82 +703,11 @@ export const NESSTheme = createTheme({
         },
       },
     },
-    MuiAutocomplete: {
-      styleOverrides: {
-        tag: {
-          margin: 1,
-        },
-        root: {
-          '.MuiAutocomplete-inputRoot.MuiOutlinedInput-root .MuiAutocomplete-endAdornment':
-            {
-              right: 14,
-            },
-        },
-        clearIndicator: {
-          background: alpha(colors.error.lighter, 0.2),
-          color: colors.error.main,
-          marginRight: 8,
-
-          '&:hover': {
-            background: alpha(colors.error.lighter, 0.3),
-          },
-        },
-        popupIndicator: {
-          color: colors.alpha.black[70],
-
-          '&:hover': {
-            background: alpha(colors.primary.lighter, 0.2),
-          },
-        },
-      },
-    },
-    MuiTablePagination: {
-      styleOverrides: {
-        toolbar: {
-          '& .MuiIconButton-root': {
-            padding: 8,
-          },
-        },
-        select: {
-          '&:focus': {
-            backgroundColor: 'transparent',
-          },
-        },
-      },
-    },
     MuiToolbar: {
       styleOverrides: {
         root: {
           minHeight: '0 !important',
           padding: '0 !important',
-        },
-      },
-    },
-    MuiTableRow: {
-      styleOverrides: {
-        head: {
-          background: colors.alpha.black[5],
-        },
-        root: {
-          transition: 'background-color .2s',
-
-          '&.MuiTableRow-hover:hover': {
-            backgroundColor: alpha(colors.alpha.black[5], 0.05),
-          },
-        },
-      },
-    },
-    MuiTableCell: {
-      styleOverrides: {
-        root: {
-          borderBottomColor: colors.alpha.black[10],
-          fontSize: 14,
-        },
-        head: {
-          textTransform: 'uppercase',
-          fontSize: 13,
-          fontWeight: 'bold',
-          color: colors.alpha.black[70],
         },
       },
     },
@@ -978,54 +722,6 @@ export const NESSTheme = createTheme({
         },
         action: {
           color: colors.alpha.black[70],
-        },
-      },
-    },
-    MuiTimelineDot: {
-      styleOverrides: {
-        root: {
-          margin: 0,
-          zIndex: 5,
-          position: 'absolute',
-          top: '50%',
-          marginTop: -6,
-          left: -6,
-        },
-        outlined: {
-          backgroundColor: colors.alpha.white[100],
-          boxShadow: '0 0 0 6px ' + colors.alpha.white[100],
-        },
-        outlinedPrimary: {
-          backgroundColor: colors.alpha.white[100],
-          boxShadow: '0 0 0 6px ' + colors.alpha.white[100],
-        },
-      },
-    },
-    MuiTimelineConnector: {
-      styleOverrides: {
-        root: {
-          position: 'absolute',
-          height: '100%',
-          top: 0,
-          borderRadius: 50,
-          backgroundColor: colors.alpha.black[10],
-        },
-      },
-    },
-    MuiTimelineItem: {
-      styleOverrides: {
-        root: {
-          minHeight: 0,
-          padding: '8px 0',
-
-          '&:before': {
-            display: 'none',
-          },
-        },
-        missingOppositeContent: {
-          '&:before': {
-            display: 'none',
-          },
         },
       },
     },
@@ -1081,24 +777,6 @@ export const NESSTheme = createTheme({
 
           '&.Mui-checked .MuiSwitch-thumb': {
             backgroundColor: colors.primary.main,
-          },
-        },
-      },
-    },
-    MuiStepper: {
-      styleOverrides: {
-        root: {
-          paddingTop: 20,
-          paddingBottom: 20,
-          background: colors.alpha.black[5],
-        },
-      },
-    },
-    MuiStepIcon: {
-      styleOverrides: {
-        root: {
-          '&.MuiStepIcon-completed': {
-            color: colors.success.main,
           },
         },
       },

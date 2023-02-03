@@ -11,13 +11,18 @@ import {
   useTheme,
 } from '@mui/material'
 import Logo from '../../../components/LogoSign'
-import SidebarMenu from './menu'
+import Options from './options'
 import { SidebarWrapper } from './styles'
 
 function Sidebar() {
   const { sidebarToggle, toggleSidebar } = useContext(SidebarContext)
   const closeSidebar = () => toggleSidebar()
   const theme = useTheme()
+
+  const wrapperBackground =
+    theme.palette.mode === 'dark'
+      ? alpha(lighten(theme.header.background as string, 0.1), 0.5)
+      : darken(theme.colors.alpha.black[100], 0.5)
 
   return (
     <>
@@ -30,10 +35,7 @@ function Sidebar() {
           position: 'fixed',
           left: 0,
           top: 0,
-          background:
-            theme.palette.mode === 'dark'
-              ? alpha(lighten(theme.header.background as string, 0.1), 0.5)
-              : darken(theme.colors.alpha.black[100], 0.5),
+          background: wrapperBackground,
           boxShadow:
             theme.palette.mode === 'dark' ? theme.sidebar.boxShadow : 'none',
         }}
@@ -56,7 +58,7 @@ function Sidebar() {
               background: theme.colors.alpha.trueWhite[10],
             }}
           />
-          <SidebarMenu />
+          <Options />
         </Scrollbar>
         <Divider
           sx={{
@@ -74,14 +76,7 @@ function Sidebar() {
         variant="temporary"
         elevation={9}
       >
-        <SidebarWrapper
-          sx={{
-            background:
-              theme.palette.mode === 'dark'
-                ? theme.colors.alpha.white[100]
-                : darken(theme.colors.alpha.black[100], 0.5),
-          }}
-        >
+        <SidebarWrapper sx={{ background: theme.sidebar.background }}>
           <Scrollbar>
             <Box mt={3}>
               <Box
@@ -100,7 +95,7 @@ function Sidebar() {
                 background: theme.colors.alpha.trueWhite[10],
               }}
             />
-            <SidebarMenu />
+            <Options />
           </Scrollbar>
         </SidebarWrapper>
       </Drawer>
