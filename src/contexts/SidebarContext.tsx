@@ -1,13 +1,13 @@
 import { createContext, FC, useState } from 'react'
-type SidebarContext = {
+
+interface ISidebarContext {
   sidebarToggle: any
   toggleSidebar: () => void
   closeSidebar: () => void
 }
 
-// eslint-disable-next-line @typescript-eslint/no-redeclare
-export const SidebarContext = createContext<SidebarContext>(
-  {} as SidebarContext
+export const SidebarContext = createContext<ISidebarContext>(
+  {} as ISidebarContext
 )
 
 export const SidebarProvider: FC = ({ children }) => {

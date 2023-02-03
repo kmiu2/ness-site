@@ -10,8 +10,8 @@ const Loader = (Component: any) => (props: any) =>
     </Suspense>
   )
 
-const Home = Loader(lazy(() => import('./content/dashboards')))
-const Status404 = Loader(lazy(() => import('./content/pages/Status/Status404')))
+const Home = Loader(lazy(() => import('./content/home')))
+const Status404 = Loader(lazy(() => import('./content/404')))
 
 const routes: RouteObject[] = [
   {

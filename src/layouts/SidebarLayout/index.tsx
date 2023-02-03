@@ -1,7 +1,6 @@
 import { alpha, Box, lighten, useTheme } from '@mui/material'
 import { FC, ReactNode } from 'react'
 import { Outlet } from 'react-router-dom'
-
 import Header from './Header'
 import Sidebar from './Sidebar'
 

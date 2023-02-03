@@ -1,7 +1,6 @@
 import { useContext } from 'react'
 import Scrollbar from '../../../components/Scrollbar'
 import { SidebarContext } from '../../../contexts/SidebarContext'
-
 import {
   alpha,
   Box,
@@ -9,23 +8,11 @@ import {
   Divider,
   Drawer,
   lighten,
-  styled,
   useTheme,
 } from '@mui/material'
-
 import Logo from '../../../components/LogoSign'
-import SidebarMenu from './SidebarMenu'
-
-const SidebarWrapper = styled(Box)(
-  ({ theme }) => `
-        width: ${theme.sidebar.width};
-        min-width: ${theme.sidebar.width};
-        color: ${theme.colors.alpha.trueWhite[70]};
-        position: relative;
-        z-index: 7;
-        height: 100%;
-`
-)
+import SidebarMenu from './menu'
+import { SidebarWrapper } from './styles'
 
 function Sidebar() {
   const { sidebarToggle, toggleSidebar } = useContext(SidebarContext)
