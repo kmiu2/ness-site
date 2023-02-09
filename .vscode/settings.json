@@ -1,4 +1,5 @@
 {
+  "editor.tabSize": 2,
   "search.exclude": {
     "**/.next": true,
     "**/*.svg": true,
@@ -6,5 +7,14 @@
     "package-lock.json": true,
     "tsconfig.json": true
   },
-  "cSpell.words": ["amannn", "precache", "precached", "precaching", "stylelint"]
+  "cSpell.words": [
+    "amannn",
+    "arrowclosed",
+    "precache",
+    "precached",
+    "precaching",
+    "reactflow",
+    "smoothstep",
+    "stylelint"
+  ]
 }
