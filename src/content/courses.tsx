@@ -13,8 +13,13 @@ function Courses() {
         <title>Courses</title>
       </Helmet>
       <Box
-        height={`calc(100vh - ${headerHeight})`}
-        width={`calc(100vw - ${sidebarWidth})`}
+        sx={{
+          height: `calc(100vh - ${headerHeight})`,
+          width: {
+            xs: '100vw',
+            lg: `calc(100vw - ${sidebarWidth})`,
+          },
+        }}
       >
         <CourseMap />
       </Box>

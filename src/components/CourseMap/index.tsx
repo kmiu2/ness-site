@@ -1,4 +1,4 @@
-import { Card, useTheme } from '@mui/material'
+import { Card, CardContent, Typography, useTheme } from '@mui/material'
 import { useCallback, useEffect, useState } from 'react'
 import ReactFlow, {
   Controls,
@@ -14,13 +14,15 @@ import { formattedInitialNodes, formattedInitialEdges } from './helper'
 
 function CourseMap() {
   const theme = useTheme()
-  const [nodes, , onNodesChange] = useNodesState(formattedInitialNodes())
+  const [nodes, , onNodesChange] = useNodesState(formattedInitialNodes(theme))
   const [edges, setEdges, onEdgesChange] = useEdgesState(
     formattedInitialEdges()
   )
-  const [toolTip, setToolTip] = useState({
+  const [infoCard, setInfoCard] = useState({
     show: false,
-    text: '',
+    code: '',
+    name: '',
+    desc: '',
   })
 
   const onConnect = useCallback(
@@ -31,15 +33,17 @@ function CourseMap() {
   // Check which node is selected and change the color
   useEffect(() => {
     const selectedNode = nodes.find((node) => node.selected === true)
-    setToolTip({
+    setInfoCard({
       show: selectedNode ? true : false,
-      text: selectedNode ? selectedNode.data.label : '',
+      code: selectedNode ? selectedNode.data.code : '',
+      name: selectedNode ? selectedNode.data.name : '',
+      desc: selectedNode ? selectedNode.data.desc : '',
     })
   }, [nodes])
 
   return (
     <>
-      {toolTip.show && (
+      {infoCard.show && (
         <Card
           sx={{
             position: 'absolute',
@@ -48,9 +52,24 @@ function CourseMap() {
             zIndex: 100,
             padding: 1,
             margin: 1,
+            maxWidth: {
+              xs: '100%',
+              lg: '50%',
+            },
+            background: theme.colors.info.dark,
           }}
         >
-          {toolTip.text}
+          <CardContent>
+            <Typography variant="h4" gutterBottom>
+              {infoCard.code}
+            </Typography>
+            <Typography variant="h5" gutterBottom>
+              {infoCard.name}
+            </Typography>
+            <Typography variant="body1" gutterBottom>
+              {infoCard.desc}
+            </Typography>
+          </CardContent>
         </Card>
       )}
       <ReactFlow
