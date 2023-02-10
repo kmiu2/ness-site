@@ -1,5 +1,5 @@
 import { darken, Theme } from '@mui/material'
-import { initialNodes } from '../../data/CourseList'
+import { initialCourses } from '../../data/CourseList'
 import { initialEdges } from '../../data/EdgesList'
 
 // Enum is required because of this issue:
@@ -18,6 +18,8 @@ enum MarkerType {
 }
 
 export function formattedInitialNodes(theme: Theme) {
+  const initialNodes = initialCourses
+
   // Darken background of later terms
   const termColors = {
     '1A': darken(theme.palette.primary.main, 0.1),
@@ -30,19 +32,23 @@ export function formattedInitialNodes(theme: Theme) {
     '4B': darken(theme.palette.primary.main, 0.25),
   }
 
-  const formattedNodes = initialNodes.map((node) => {
+  const formattedNodes = initialNodes.map((course) => {
     return {
-      ...node,
+      id: course.course_code,
       sourcePosition: Position.Right,
       targetPosition: Position.Left,
       selected: false,
       style: {
-        background: termColors[node.data.term],
+        background: termColors[course.term],
         color: theme.palette.primary.contrastText,
       },
       data: {
-        ...node.data,
-        label: node.data.code,
+        ...course,
+        label: course.course_code,
+      },
+      position: {
+        x: course.x,
+        y: course.y,
       },
     }
   })

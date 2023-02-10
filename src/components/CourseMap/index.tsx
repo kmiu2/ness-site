@@ -10,8 +10,6 @@ import ReactFlow, {
 import 'reactflow/dist/style.css'
 import { formattedInitialNodes, formattedInitialEdges } from './helper'
 
-// TODO: add download image button?
-
 function CourseMap() {
   const theme = useTheme()
   const [nodes, , onNodesChange] = useNodesState(formattedInitialNodes(theme))
@@ -30,14 +28,13 @@ function CourseMap() {
     [setEdges]
   )
 
-  // Check which node is selected and change the color
   useEffect(() => {
     const selectedNode = nodes.find((node) => node.selected === true)
     setInfoCard({
       show: selectedNode ? true : false,
-      code: selectedNode ? selectedNode.data.code : '',
-      name: selectedNode ? selectedNode.data.name : '',
-      desc: selectedNode ? selectedNode.data.desc : '',
+      code: selectedNode ? selectedNode.data.course_code : '',
+      name: selectedNode ? selectedNode.data.course_name : '',
+      desc: selectedNode ? selectedNode.data.course_desc : '',
     })
   }, [nodes])
 
