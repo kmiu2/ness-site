@@ -69,7 +69,7 @@ function CourseMap() {
           }}
           onClose={handleCloseAlert}
         >
-          Click on a course to view more information. Use the bottom right
+          Click on a course to view more information. Use the bottom left
           controls to change the view.
         </Alert>
       </Collapse>

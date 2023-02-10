@@ -2,7 +2,7 @@ import { Box, Typography } from '@mui/material'
 import { Helmet } from 'react-helmet-async'
 import Footer from '../components/Footer'
 
-function HomeContent() {
+function Home() {
   return (
     <>
       <Helmet>
@@ -32,4 +32,4 @@ function HomeContent() {
   )
 }
 
-export default HomeContent
+export default Home

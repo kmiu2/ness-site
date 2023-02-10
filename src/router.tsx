@@ -10,9 +10,10 @@ const Loader = (Component: any) => (props: any) =>
     </Suspense>
   )
 
-const Home = Loader(lazy(() => import('./content/home')))
-const Status404 = Loader(lazy(() => import('./content/404')))
-const Courses = Loader(lazy(() => import('./content/courses')))
+const Home = Loader(lazy(() => import('./pages/home')))
+const Status404 = Loader(lazy(() => import('./pages/404')))
+const Courses = Loader(lazy(() => import('./pages/courses')))
+const About = Loader(lazy(() => import('./pages/about')))
 
 const routes: RouteObject[] = [
   {
@@ -32,6 +33,16 @@ const routes: RouteObject[] = [
       {
         path: '',
         element: <Courses />,
+      },
+    ],
+  },
+  {
+    path: '/about',
+    element: <SidebarLayout />,
+    children: [
+      {
+        path: '',
+        element: <About />,
       },
     ],
   },
