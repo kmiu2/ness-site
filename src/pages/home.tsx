@@ -19,7 +19,7 @@ function Home() {
           </Typography>
         </Box>
         <Box height={20} />
-        <Box width={{ xs: '100%', md: '50%' }}>
+        <Box width={{ xs: '100%', md: '40%' }}>
           <img
             src="/assets/logos/ness-logo-sticker.png"
             alt="NESS Logo"

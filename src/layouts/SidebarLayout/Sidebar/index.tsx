@@ -10,7 +10,7 @@ import {
   lighten,
   useTheme,
 } from '@mui/material'
-import Logo from '../../../components/LogoSign'
+import Logo from '../../../components/Logo'
 import Options from './options'
 import { SidebarWrapper } from './styles'
 
