@@ -13,6 +13,8 @@
     "precache",
     "precached",
     "precaching",
+    "prereq",
+    "prereqs",
     "reactflow",
     "smoothstep",
     "stylelint"

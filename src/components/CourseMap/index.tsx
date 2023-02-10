@@ -1,4 +1,11 @@
-import { Card, CardContent, Typography, useTheme } from '@mui/material'
+import {
+  Alert,
+  Card,
+  CardContent,
+  Collapse,
+  Typography,
+  useTheme,
+} from '@mui/material'
 import { useCallback, useEffect, useState } from 'react'
 import ReactFlow, {
   Controls,
@@ -12,6 +19,7 @@ import { formattedInitialNodes, formattedInitialEdges } from './helper'
 
 function CourseMap() {
   const theme = useTheme()
+  const [isAlertOpen, setIsAlertOpen] = useState(true)
   const [nodes, , onNodesChange] = useNodesState(formattedInitialNodes(theme))
   const [edges, setEdges, onEdgesChange] = useEdgesState(
     formattedInitialEdges()
@@ -21,6 +29,7 @@ function CourseMap() {
     code: '',
     name: '',
     desc: '',
+    prereq: '',
   })
 
   const onConnect = useCallback(
@@ -35,11 +44,31 @@ function CourseMap() {
       code: selectedNode ? selectedNode.data.course_code : '',
       name: selectedNode ? selectedNode.data.course_name : '',
       desc: selectedNode ? selectedNode.data.course_desc : '',
+      prereq: selectedNode ? selectedNode.data.course_prereq : '',
     })
   }, [nodes])
 
   return (
     <>
+      <Collapse in={isAlertOpen}>
+        <Alert
+          severity="info"
+          sx={{
+            position: 'absolute',
+            top: Number(theme.header.height),
+            left: 0,
+            zIndex: 100,
+            padding: 1,
+            margin: 1,
+            background: theme.colors.info.dark,
+            color: theme.palette.primary.main,
+          }}
+          onClose={() => setIsAlertOpen(false)}
+        >
+          Click on a course to view more information. Use the bottom right
+          controls to change the view.
+        </Alert>
+      </Collapse>
       {infoCard.show && (
         <Card
           sx={{
@@ -65,6 +94,9 @@ function CourseMap() {
             </Typography>
             <Typography variant="body1" gutterBottom>
               {infoCard.desc}
+            </Typography>
+            <Typography variant="subtitle1" gutterBottom>
+              {infoCard.prereq}
             </Typography>
           </CardContent>
         </Card>
