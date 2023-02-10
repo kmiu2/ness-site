@@ -32,6 +32,7 @@ export function formattedInitialNodes(theme: Theme) {
     '4B': darken(theme.palette.primary.main, 0.25),
   }
 
+  // Format nodes for react-flow
   const formattedNodes = initialNodes.map((course) => {
     return {
       id: course.course_code,
@@ -56,16 +57,24 @@ export function formattedInitialNodes(theme: Theme) {
 }
 
 export function formattedInitialEdges() {
+  // Get random color for each edge
+  const generateColor = () => {
+    return '#' + Math.floor(Math.random() * 16777215).toString(16)
+  }
+
   const formattedEdges = initialEdges.map((edge) => {
+    const color = generateColor()
     return {
       ...edge,
       type: 'smoothstep',
       markerEnd: {
         type: MarkerType.Arrow,
         strokeWidth: 2,
+        color,
       },
       style: {
         strokeWidth: 2,
+        stroke: color,
       },
     }
   })

@@ -13,6 +13,7 @@ import ReactFlow, {
   useNodesState,
   useEdgesState,
   addEdge,
+  Panel,
 } from 'reactflow'
 import 'reactflow/dist/style.css'
 import { formattedInitialNodes, formattedInitialEdges } from './helper'
@@ -115,6 +116,20 @@ function CourseMap() {
         onConnect={onConnect}
         proOptions={{ hideAttribution: true }}
       >
+        <Panel
+          position="top-left"
+          style={{
+            padding: 5,
+            borderRadius: 5,
+            background: theme.colors.gradients.blue2,
+            color: theme.colors.alpha.white[100],
+          }}
+          onClick={() => {
+            console.log('clicked')
+          }}
+        >
+          Course Map (2022 - 2023)
+        </Panel>
         <Controls />
         <Background />
       </ReactFlow>
