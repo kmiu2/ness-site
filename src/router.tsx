@@ -14,6 +14,7 @@ const Home = Loader(lazy(() => import('./pages/home')))
 const Status404 = Loader(lazy(() => import('./pages/404')))
 const Courses = Loader(lazy(() => import('./pages/courses')))
 const About = Loader(lazy(() => import('./pages/about')))
+const Team = Loader(lazy(() => import('./pages/team')))
 
 const routes: RouteObject[] = [
   {
@@ -43,6 +44,16 @@ const routes: RouteObject[] = [
       {
         path: '',
         element: <About />,
+      },
+    ],
+  },
+  {
+    path: '/team',
+    element: <SidebarLayout />,
+    children: [
+      {
+        path: '',
+        element: <Team />,
       },
     ],
   },
