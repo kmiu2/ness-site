@@ -20,7 +20,7 @@ export interface PhotoGalleryItem {
   description?: string
 }
 
-export function PhotoGallery(props: { items: PhotoGalleryItem[] }) {
+export const PhotoGallery = (props: { items: PhotoGalleryItem[] }) => {
   const { items } = props
   const theme = useTheme()
   const [isInfoOpen, setIsInfoOpen] = useState(false)
@@ -71,6 +71,7 @@ export function PhotoGallery(props: { items: PhotoGalleryItem[] }) {
                     <IconButton
                       sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
                       aria-label={`info about ${item.title}`}
+                      // tslint:disable-next-line: jsx-no-lambda
                       onClick={() => handleOnInfoClick(item)}
                     >
                       <InfoRounded />

@@ -18,7 +18,7 @@ import ReactFlow, {
 import 'reactflow/dist/style.css'
 import { formattedInitialNodes, formattedInitialEdges } from './helper'
 
-function CourseMap() {
+export const CourseMap = () => {
   const theme = useTheme()
   const [isAlertOpen, setIsAlertOpen] = useState(true)
   const [nodes, , onNodesChange] = useNodesState(formattedInitialNodes(theme))
@@ -124,9 +124,6 @@ function CourseMap() {
             background: theme.colors.gradients.blue2,
             color: theme.colors.alpha.white[100],
           }}
-          onClick={() => {
-            console.log('clicked')
-          }}
         >
           Course Map (2022 - 2023)
         </Panel>
@@ -136,5 +133,3 @@ function CourseMap() {
     </>
   )
 }
-
-export default CourseMap

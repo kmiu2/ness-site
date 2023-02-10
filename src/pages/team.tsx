@@ -1,9 +1,9 @@
 import { Box, Typography } from '@mui/material'
 import { Helmet } from 'react-helmet-async'
-import Footer from '../components/Footer'
+import { Footer } from '../components/Footer'
 import { PhotoGallery, PhotoGalleryItem } from '../components/PhotoGallery'
 
-function Team() {
+const Team = () => {
   const team2223: PhotoGalleryItem[] = [
     {
       img: '/assets/profiles/2223/nick_pfeifle.jpg',

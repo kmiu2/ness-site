@@ -1,16 +1,14 @@
-import { useRoutes } from 'react-router-dom'
-import router from './router'
+import { ThemeProviderWrapper } from './theme/ThemeProvider'
+import { routes } from './router'
 import { CssBaseline } from '@mui/material'
-import ThemeProvider from './theme/ThemeProvider'
+import { useRoutes } from 'react-router-dom'
 
-function App() {
-  const content = useRoutes(router)
-
+export const App = () => {
+  const content = useRoutes(routes)
   return (
-    <ThemeProvider>
+    <ThemeProviderWrapper>
       <CssBaseline />
       {content}
-    </ThemeProvider>
+    </ThemeProviderWrapper>
   )
 }
-export default App

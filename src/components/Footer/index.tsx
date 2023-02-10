@@ -1,6 +1,6 @@
 import { Box, Typography } from '@mui/material'
 
-function Footer() {
+export const Footer = () => {
   return (
     <Box
       marginLeft={{
@@ -12,5 +12,3 @@ function Footer() {
     </Box>
   )
 }
-
-export default Footer

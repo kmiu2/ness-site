@@ -23,7 +23,7 @@ interface Option {
   }[]
 }
 
-function Options() {
+export const Options = () => {
   const { closeSidebar } = useContext(SidebarContext)
 
   const menuOptions: Option[] = [
@@ -174,5 +174,3 @@ function Options() {
 
   return <MenuWrapper>{renderOptions(menuOptions)}</MenuWrapper>
 }
-
-export default Options

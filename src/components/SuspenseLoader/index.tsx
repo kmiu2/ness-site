@@ -1,6 +1,6 @@
 import { Box, CircularProgress } from '@mui/material'
 
-function SuspenseLoader() {
+export const SuspenseLoader = () => {
   return (
     <Box
       sx={{
@@ -18,5 +18,3 @@ function SuspenseLoader() {
     </Box>
   )
 }
-
-export default SuspenseLoader

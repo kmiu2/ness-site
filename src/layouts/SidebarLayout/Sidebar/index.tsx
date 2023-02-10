@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import Scrollbar from '../../../components/Scrollbar'
+import { Scrollbar } from '../../../components/Scrollbar'
 import { SidebarContext } from '../../../contexts/SidebarContext'
 import {
   alpha,
@@ -10,11 +10,11 @@ import {
   lighten,
   useTheme,
 } from '@mui/material'
-import Logo from '../../../components/Logo'
-import Options from './options'
+import { Logo } from '../../../components/Logo'
+import { Options } from './options'
 import { SidebarWrapper } from './styles'
 
-function Sidebar() {
+export const Sidebar = () => {
   const { sidebarToggle, toggleSidebar } = useContext(SidebarContext)
   const closeSidebar = () => toggleSidebar()
   const theme = useTheme()
@@ -102,5 +102,3 @@ function Sidebar() {
     </>
   )
 }
-
-export default Sidebar

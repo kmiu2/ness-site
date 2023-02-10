@@ -9,7 +9,7 @@ interface PageTitleProps {
   docs?: string
 }
 
-const PageTitle: FC<PageTitleProps> = ({
+export const PageTitle: FC<PageTitleProps> = ({
   heading = '',
   subHeading = '',
   docs = '',
@@ -49,5 +49,3 @@ PageTitle.propTypes = {
   subHeading: PropTypes.string,
   docs: PropTypes.string,
 }
-
-export default PageTitle

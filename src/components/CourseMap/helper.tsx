@@ -17,7 +17,7 @@ enum MarkerType {
   ArrowClosed = 'arrowclosed',
 }
 
-export function formattedInitialNodes(theme: Theme) {
+export const formattedInitialNodes = (theme: Theme) => {
   const initialNodes = initialCourses
 
   // Darken background of later terms
@@ -56,7 +56,7 @@ export function formattedInitialNodes(theme: Theme) {
   return formattedNodes
 }
 
-export function formattedInitialEdges() {
+export const formattedInitialEdges = () => {
   // Get random color for each edge
   const generateColor = () => {
     return '#' + Math.floor(Math.random() * 16777215).toString(16)

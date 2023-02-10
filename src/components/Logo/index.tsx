@@ -12,7 +12,7 @@ const LogoWrapper = styled(Link)(
 `
 )
 
-function Logo() {
+export const Logo = () => {
   return (
     <LogoWrapper to="/">
       <img
@@ -24,5 +24,3 @@ function Logo() {
     </LogoWrapper>
   )
 }
-
-export default Logo

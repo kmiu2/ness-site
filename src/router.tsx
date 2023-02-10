@@ -1,7 +1,7 @@
 import { lazy, Suspense } from 'react'
 import { RouteObject } from 'react-router'
-import SidebarLayout from './layouts/SidebarLayout'
-import SuspenseLoader from './components/SuspenseLoader'
+import { SidebarLayout } from './layouts/SidebarLayout'
+import { SuspenseLoader } from './components/SuspenseLoader'
 
 const Loader = (Component: any) => (props: any) =>
   (
@@ -17,7 +17,7 @@ const About = Loader(lazy(() => import('./pages/about')))
 const Team = Loader(lazy(() => import('./pages/team')))
 const Resources = Loader(lazy(() => import('./pages/resources')))
 
-const routes: RouteObject[] = [
+export const routes: RouteObject[] = [
   {
     path: '/',
     element: <SidebarLayout />,
@@ -73,5 +73,3 @@ const routes: RouteObject[] = [
     element: <Status404 />,
   },
 ]
-
-export default routes

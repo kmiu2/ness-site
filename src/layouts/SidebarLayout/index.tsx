@@ -1,14 +1,14 @@
 import { Box, useTheme } from '@mui/material'
 import { FC, ReactNode } from 'react'
 import { Outlet } from 'react-router-dom'
-import Header from './Header'
-import Sidebar from './Sidebar'
+import { Header } from './Header'
+import { Sidebar } from './Sidebar'
 
 interface SidebarLayoutProps {
   children?: ReactNode
 }
 
-const SidebarLayout: FC<SidebarLayoutProps> = () => {
+export const SidebarLayout: FC<SidebarLayoutProps> = () => {
   const theme = useTheme()
 
   return (
@@ -41,5 +41,3 @@ const SidebarLayout: FC<SidebarLayoutProps> = () => {
     </>
   )
 }
-
-export default SidebarLayout

@@ -1,8 +1,8 @@
 import { Box, Typography } from '@mui/material'
 import { Helmet } from 'react-helmet-async'
-import Footer from '../components/Footer'
+import { Footer } from '../components/Footer'
 
-function About() {
+const About = () => {
   return (
     <>
       <Helmet>

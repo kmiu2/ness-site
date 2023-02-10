@@ -9,7 +9,11 @@ interface ScrollbarProps {
   children?: ReactNode
 }
 
-const Scrollbar: FC<ScrollbarProps> = ({ className, children, ...rest }) => {
+export const Scrollbar: FC<ScrollbarProps> = ({
+  className,
+  children,
+  ...rest
+}) => {
   const theme = useTheme()
 
   const handleRenderThumb = () => {
@@ -40,5 +44,3 @@ Scrollbar.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
 }
-
-export default Scrollbar
