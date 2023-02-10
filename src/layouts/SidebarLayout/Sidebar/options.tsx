@@ -45,20 +45,15 @@ function Options() {
           <SubMenuWrapper>
             <List component="div">
               <ListItem component="div">
-                <Link
-                  href="/courses.png"
-                  target="_blank"
-                  width="100%"
-                  underline="none"
+                <Button
+                  disableRipple
+                  component={RouterLink}
+                  onClick={closeSidebar}
+                  to="/courses"
+                  startIcon={<AccountTreeTwoTone />}
                 >
-                  <Button
-                    disableRipple
-                    onClick={closeSidebar}
-                    startIcon={<AccountTreeTwoTone />}
-                  >
-                    Course Map
-                  </Button>
-                </Link>
+                  Course Map
+                </Button>
               </ListItem>
               <ListItem component="div">
                 <Link

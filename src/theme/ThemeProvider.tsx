@@ -1,7 +1,7 @@
 import { ThemeProvider } from '@mui/material'
 import { StylesProvider } from '@mui/styles'
 import React, { useState } from 'react'
-import { themeCreator } from './base'
+import { themeCreator } from './interface'
 
 export const ThemeContext = React.createContext((themeName: string): void => {
   throw new Error('No theme provider')
