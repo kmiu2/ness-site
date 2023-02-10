@@ -5,11 +5,11 @@ import { SidebarContext } from '../../../contexts/SidebarContext'
 import {
   HomeTwoTone,
   AccountTreeTwoTone,
-  RuleTwoTone,
   LanguageTwoTone,
   EmailTwoTone,
   GroupsTwoTone,
   InfoTwoTone,
+  RuleTwoTone,
 } from '@mui/icons-material'
 import { MenuWrapper, SubMenuWrapper } from './styles'
 
@@ -52,6 +52,17 @@ function Options() {
           icon: <RuleTwoTone />,
           path: 'https://ver7ici.github.io/UWCourseMap/',
           type: 'link',
+        },
+      ],
+    },
+    {
+      title: 'Resources',
+      options: [
+        {
+          title: 'Resource Links',
+          icon: <LanguageTwoTone />,
+          path: '/resources',
+          type: 'router-link',
         },
       ],
     },
