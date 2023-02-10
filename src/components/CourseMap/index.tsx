@@ -37,6 +37,10 @@ function CourseMap() {
     [setEdges]
   )
 
+  const handleCloseAlert = () => {
+    setIsAlertOpen(false)
+  }
+
   useEffect(() => {
     const selectedNode = nodes.find((node) => node.selected === true)
     setInfoCard({
@@ -63,7 +67,7 @@ function CourseMap() {
             background: theme.colors.info.dark,
             color: theme.palette.primary.main,
           }}
-          onClose={() => setIsAlertOpen(false)}
+          onClose={handleCloseAlert}
         >
           Click on a course to view more information. Use the bottom right
           controls to change the view.
