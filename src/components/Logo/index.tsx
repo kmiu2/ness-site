@@ -12,9 +12,9 @@ const LogoWrapper = styled(Link)(
 `
 )
 
-function Logo() {
+export const Logo = () => {
   return (
-    <LogoWrapper to="/overview">
+    <LogoWrapper to="/">
       <img
         src="/assets/logos/ness-logo.png"
         alt="logo"
@@ -24,5 +24,3 @@ function Logo() {
     </LogoWrapper>
   )
 }
-
-export default Logo

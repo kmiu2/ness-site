@@ -1,8 +1,8 @@
 import { Box, useTheme } from '@mui/material'
 import { Helmet } from 'react-helmet-async'
-import CourseMap from '../components/CourseMap'
+import { CourseMap } from '../components/CourseMap'
 
-function Courses() {
+const Courses = () => {
   const theme = useTheme()
   const headerHeight = theme.header.height
   const sidebarWidth = theme.sidebar.width

@@ -3,10 +3,10 @@ import CloseTwoToneIcon from '@mui/icons-material/CloseTwoTone'
 import MenuTwoToneIcon from '@mui/icons-material/MenuTwoTone'
 import { Box, IconButton, Tooltip, Typography } from '@mui/material'
 import { SidebarContext } from '../../../contexts/SidebarContext'
-import HeaderButtons from './buttons'
+import { HeaderButtons } from './buttons'
 import { HeaderWrapper } from './styles'
 
-function Header() {
+export const Header = () => {
   const { sidebarToggle, toggleSidebar } = useContext(SidebarContext)
 
   return (
@@ -39,5 +39,3 @@ function Header() {
     </HeaderWrapper>
   )
 }
-
-export default Header

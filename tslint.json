@@ -17,7 +17,8 @@
   },
   "rules": {
     "prettier": true,
-    "jsx-boolean-value": false
+    "jsx-boolean-value": false,
+    "only-arrow-functions": true
   },
   "rulesDirectory": ["tslint-plugin-prettier"]
 }

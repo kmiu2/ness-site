@@ -5,123 +5,172 @@ import { SidebarContext } from '../../../contexts/SidebarContext'
 import {
   HomeTwoTone,
   AccountTreeTwoTone,
-  RuleTwoTone,
   LanguageTwoTone,
   EmailTwoTone,
+  GroupsTwoTone,
+  InfoTwoTone,
+  RuleTwoTone,
 } from '@mui/icons-material'
 import { MenuWrapper, SubMenuWrapper } from './styles'
 
-function Options() {
-  const { closeSidebar } = useContext(SidebarContext)
-
-  return (
-    <>
-      <MenuWrapper>
-        <List component="div">
-          <SubMenuWrapper>
-            <List component="div">
-              <ListItem component="div">
-                <Button
-                  disableRipple
-                  component={RouterLink}
-                  onClick={closeSidebar}
-                  to="/"
-                  startIcon={<HomeTwoTone />}
-                >
-                  Home
-                </Button>
-              </ListItem>
-            </List>
-          </SubMenuWrapper>
-        </List>
-        <List
-          component="div"
-          subheader={
-            <ListSubheader component="div" disableSticky>
-              Courses
-            </ListSubheader>
-          }
-        >
-          <SubMenuWrapper>
-            <List component="div">
-              <ListItem component="div">
-                <Button
-                  disableRipple
-                  component={RouterLink}
-                  onClick={closeSidebar}
-                  to="/courses"
-                  startIcon={<AccountTreeTwoTone />}
-                >
-                  Course Map
-                </Button>
-              </ListItem>
-              <ListItem component="div">
-                <Link
-                  href="https://ver7ici.github.io/UWCourseMap/"
-                  target="_blank"
-                  width="100%"
-                  underline="none"
-                >
-                  <Button
-                    disableRipple
-                    onClick={closeSidebar}
-                    startIcon={<RuleTwoTone />}
-                  >
-                    Prerequisite Checker
-                  </Button>
-                </Link>
-              </ListItem>
-            </List>
-          </SubMenuWrapper>
-        </List>
-        <List
-          component="div"
-          subheader={
-            <ListSubheader component="div" disableSticky>
-              Connect
-            </ListSubheader>
-          }
-        >
-          <SubMenuWrapper>
-            <List component="div">
-              <ListItem component="div">
-                <Link
-                  href="https://uwaterloo.ca/nanotechnology-engineering-student-society/"
-                  target="_blank"
-                  width="100%"
-                  underline="none"
-                >
-                  <Button
-                    disableRipple
-                    onClick={closeSidebar}
-                    startIcon={<LanguageTwoTone />}
-                  >
-                    UWaterloo Site
-                  </Button>
-                </Link>
-              </ListItem>
-              <ListItem component="div">
-                <Link
-                  href="mailto:ness@uwaterloo.ca"
-                  target="_blank"
-                  width="100%"
-                  underline="none"
-                >
-                  <Button
-                    disableRipple
-                    onClick={closeSidebar}
-                    startIcon={<EmailTwoTone />}
-                  >
-                    Email Us
-                  </Button>
-                </Link>
-              </ListItem>
-            </List>
-          </SubMenuWrapper>
-        </List>
-      </MenuWrapper>
-    </>
-  )
+interface Option {
+  title: string
+  options: {
+    title: string
+    icon: JSX.Element
+    path: string
+    type: 'router-link' | 'link'
+  }[]
 }
 
-export default Options
+export const Options = () => {
+  const { closeSidebar } = useContext(SidebarContext)
+
+  const menuOptions: Option[] = [
+    {
+      title: '',
+      options: [
+        {
+          title: 'Home',
+          icon: <HomeTwoTone />,
+          path: '/',
+          type: 'router-link',
+        },
+      ],
+    },
+    {
+      title: 'Courses',
+      options: [
+        {
+          title: 'Course Map',
+          icon: <AccountTreeTwoTone />,
+          path: '/courses',
+          type: 'router-link',
+        },
+        {
+          title: 'Prerequisite Checker',
+          icon: <RuleTwoTone />,
+          path: 'https://ver7ici.github.io/UWCourseMap/',
+          type: 'link',
+        },
+      ],
+    },
+    {
+      title: 'Resources',
+      options: [
+        {
+          title: 'Resource Links',
+          icon: <LanguageTwoTone />,
+          path: '/resources',
+          type: 'router-link',
+        },
+      ],
+    },
+    {
+      title: 'About',
+      options: [
+        {
+          title: 'About Us',
+          icon: <InfoTwoTone />,
+          path: '/about',
+          type: 'router-link',
+        },
+        {
+          title: 'Our Team',
+          icon: <GroupsTwoTone />,
+          path: '/team',
+          type: 'router-link',
+        },
+      ],
+    },
+    {
+      title: 'Connect',
+      options: [
+        {
+          title: 'UWaterloo Site',
+          icon: <LanguageTwoTone />,
+          path: 'https://uwaterloo.ca/nanotechnology-engineering-student-society/',
+          type: 'link',
+        },
+        {
+          title: 'Email Us',
+          icon: <EmailTwoTone />,
+          path: 'mailto:ness@uwaterloo.ca',
+          type: 'link',
+        },
+      ],
+    },
+  ]
+
+  const renderOptions = (options: Option[]) => {
+    return options.map((option) => {
+      if (option.title === '') {
+        return (
+          <List component="div" key={option.title}>
+            <SubMenuWrapper>
+              <List component="div">{renderSubOptions(option.options)}</List>
+            </SubMenuWrapper>
+          </List>
+        )
+      } else {
+        return (
+          <List
+            component="div"
+            key={option.title}
+            subheader={
+              <ListSubheader component="div" disableSticky>
+                {option.title}
+              </ListSubheader>
+            }
+          >
+            <SubMenuWrapper>
+              <List component="div">{renderSubOptions(option.options)}</List>
+            </SubMenuWrapper>
+          </List>
+        )
+      }
+    })
+  }
+
+  const renderSubOptions = (options: Option['options']) => {
+    return options.map((option) => {
+      if (option.type === 'router-link') {
+        return (
+          <ListItem component="div" key={option.title}>
+            <Button
+              disableRipple
+              component={RouterLink}
+              onClick={closeSidebar}
+              to={option.path}
+              startIcon={option.icon}
+            >
+              {option.title}
+            </Button>
+          </ListItem>
+        )
+      } else if (option.type === 'link') {
+        return (
+          <ListItem component="div" key={option.title}>
+            <Link
+              href={option.path}
+              target="_blank"
+              width="100%"
+              underline="none"
+            >
+              <Button
+                disableRipple
+                onClick={closeSidebar}
+                startIcon={option.icon}
+              >
+                {option.title}
+              </Button>
+            </Link>
+          </ListItem>
+        )
+      }
+      return null
+    })
+  }
+
+  return <MenuWrapper>{renderOptions(menuOptions)}</MenuWrapper>
+}

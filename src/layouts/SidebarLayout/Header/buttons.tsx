@@ -1,7 +1,7 @@
 import { Box, IconButton, Tooltip } from '@mui/material'
 import { Instagram } from '@mui/icons-material'
 
-function HeaderButtons() {
+export const HeaderButtons = () => {
   const handleOpenDiscord = () => {
     window.open('https://discord.gg/XcwxXkdexV', '_blank')
   }
@@ -30,5 +30,3 @@ function HeaderButtons() {
     </Box>
   )
 }
-
-export default HeaderButtons

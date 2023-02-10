@@ -1,8 +1,8 @@
 import { Box, Typography } from '@mui/material'
 import { Helmet } from 'react-helmet-async'
-import Footer from '../components/Footer'
+import { Footer } from '../components/Footer'
 
-function HomeContent() {
+const Home = () => {
   return (
     <>
       <Helmet>
@@ -19,7 +19,7 @@ function HomeContent() {
           </Typography>
         </Box>
         <Box height={20} />
-        <Box width={{ xs: '100%', md: '50%' }}>
+        <Box width={{ xs: '100%', md: '40%' }}>
           <img
             src="/assets/logos/ness-logo-sticker.png"
             alt="NESS Logo"
@@ -32,4 +32,4 @@ function HomeContent() {
   )
 }
 
-export default HomeContent
+export default Home

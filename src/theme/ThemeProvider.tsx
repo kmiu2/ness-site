@@ -7,7 +7,7 @@ export const ThemeContext = React.createContext((themeName: string): void => {
   throw new Error('No theme provider')
 })
 
-const ThemeProviderWrapper: React.FC = (props) => {
+export const ThemeProviderWrapper: React.FC = (props) => {
   const curThemeName = localStorage.getItem('appTheme') || 'NESSTheme'
   const [themeName, _setThemeName] = useState(curThemeName)
   const theme = themeCreator(themeName)
@@ -24,5 +24,3 @@ const ThemeProviderWrapper: React.FC = (props) => {
     </StylesProvider>
   )
 }
-
-export default ThemeProviderWrapper

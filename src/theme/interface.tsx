@@ -3,7 +3,7 @@ import React from 'react'
 import { Theme } from '@mui/material'
 import { NESSTheme } from './base'
 
-export function themeCreator(theme: string): Theme {
+export const themeCreator = (theme: string): Theme => {
   return themeMap[theme]
 }
 

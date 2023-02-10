@@ -13,7 +13,7 @@ const MainContent = styled(Box)(
 `
 )
 
-function Status404() {
+const Status404 = () => {
   return (
     <>
       <Helmet>

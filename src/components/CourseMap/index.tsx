@@ -13,11 +13,12 @@ import ReactFlow, {
   useNodesState,
   useEdgesState,
   addEdge,
+  Panel,
 } from 'reactflow'
 import 'reactflow/dist/style.css'
 import { formattedInitialNodes, formattedInitialEdges } from './helper'
 
-function CourseMap() {
+export const CourseMap = () => {
   const theme = useTheme()
   const [isAlertOpen, setIsAlertOpen] = useState(true)
   const [nodes, , onNodesChange] = useNodesState(formattedInitialNodes(theme))
@@ -69,7 +70,7 @@ function CourseMap() {
           }}
           onClose={handleCloseAlert}
         >
-          Click on a course to view more information. Use the bottom right
+          Click on a course to view more information. Use the bottom left
           controls to change the view.
         </Alert>
       </Collapse>
@@ -115,11 +116,20 @@ function CourseMap() {
         onConnect={onConnect}
         proOptions={{ hideAttribution: true }}
       >
+        <Panel
+          position="top-left"
+          style={{
+            padding: 5,
+            borderRadius: 5,
+            background: theme.colors.gradients.blue2,
+            color: theme.colors.alpha.white[100],
+          }}
+        >
+          Course Map (2022 - 2023)
+        </Panel>
         <Controls />
         <Background />
       </ReactFlow>
     </>
   )
 }
-
-export default CourseMap
