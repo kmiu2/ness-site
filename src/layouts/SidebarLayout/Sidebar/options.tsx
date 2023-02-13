@@ -10,6 +10,7 @@ import {
   GroupsTwoTone,
   InfoTwoTone,
   RuleTwoTone,
+  BookTwoTone,
 } from '@mui/icons-material'
 import { MenuWrapper, SubMenuWrapper } from './styles'
 
@@ -86,6 +87,12 @@ export const Options = () => {
     {
       title: 'Connect',
       options: [
+        {
+          title: 'What is Nano?',
+          icon: <BookTwoTone />,
+          path: 'https://whatsnano.medium.com/',
+          type: 'link',
+        },
         {
           title: 'UWaterloo Site',
           icon: <LanguageTwoTone />,
