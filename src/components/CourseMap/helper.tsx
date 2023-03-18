@@ -46,12 +46,43 @@ export const formattedInitialNodes = (theme: Theme) => {
       data: {
         ...course,
         label: course.course_code,
+        isHeader: false,
       },
       position: {
         x: course.x,
         y: course.y,
       },
     }
+  })
+
+  // Add in headers for each term
+  const terms = ['1A', '1B', '2A', '2B', '3A', '3B', '4A', '4B']
+  terms.forEach((term, i) => {
+    formattedNodes.push({
+      id: term,
+      sourcePosition: Position.Right,
+      targetPosition: Position.Left,
+      selected: false,
+      style: {
+        background: darken(theme.palette.primary.main, 0.75),
+        color: theme.palette.primary.dark,
+      },
+      data: {
+        label: term,
+        isHeader: true,
+        course_code: term,
+        course_name: '',
+        course_desc: '',
+        course_prereq: '',
+        term: '',
+        x: 0,
+        y: 0,
+      },
+      position: {
+        x: 0 + i * 200,
+        y: -100,
+      },
+    })
   })
   return formattedNodes
 }

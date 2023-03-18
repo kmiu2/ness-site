@@ -27,6 +27,7 @@ export const CourseMap = () => {
   )
   const [infoCard, setInfoCard] = useState({
     show: false,
+    isHeader: false,
     code: '',
     name: '',
     desc: '',
@@ -46,6 +47,7 @@ export const CourseMap = () => {
     const selectedNode = nodes.find((node) => node.selected === true)
     setInfoCard({
       show: selectedNode ? true : false,
+      isHeader: selectedNode ? selectedNode.data.isHeader : false,
       code: selectedNode ? selectedNode.data.course_code : '',
       name: selectedNode ? selectedNode.data.course_name : '',
       desc: selectedNode ? selectedNode.data.course_desc : '',
@@ -91,18 +93,24 @@ export const CourseMap = () => {
           }}
         >
           <CardContent>
-            <Typography variant="h4" gutterBottom>
-              {infoCard.code}
-            </Typography>
-            <Typography variant="h5" gutterBottom>
-              {infoCard.name}
-            </Typography>
-            <Typography variant="body1" gutterBottom>
-              {infoCard.desc}
-            </Typography>
-            <Typography variant="subtitle1" gutterBottom>
-              {infoCard.prereq}
-            </Typography>
+            {infoCard.isHeader ? (
+              <Typography variant="h4">{infoCard.code}</Typography>
+            ) : (
+              <>
+                <Typography variant="h4" gutterBottom>
+                  {infoCard.code}
+                </Typography>
+                <Typography variant="h5" gutterBottom>
+                  {infoCard.name}
+                </Typography>
+                <Typography variant="body1" gutterBottom>
+                  {infoCard.desc}
+                </Typography>
+                <Typography variant="subtitle1" gutterBottom>
+                  {infoCard.prereq}
+                </Typography>
+              </>
+            )}
           </CardContent>
         </Card>
       )}
@@ -125,7 +133,7 @@ export const CourseMap = () => {
             color: theme.colors.alpha.white[100],
           }}
         >
-          Course Map (2022 - 2023)
+          NE Course Map ('22 - '23)
         </Panel>
         <Controls />
         <Background />
