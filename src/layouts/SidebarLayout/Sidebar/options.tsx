@@ -11,6 +11,9 @@ import {
   InfoTwoTone,
   RuleTwoTone,
   BookTwoTone,
+  EventNoteTwoTone,
+  FormatListNumberedRtlTwoTone,
+  PlaylistAddTwoTone,
 } from '@mui/icons-material'
 import { MenuWrapper, SubMenuWrapper } from './styles'
 
@@ -47,6 +50,24 @@ export const Options = () => {
           icon: <AccountTreeTwoTone />,
           path: '/courses',
           type: 'router-link',
+        },
+        {
+          title: 'Schedule of Classes',
+          icon: <EventNoteTwoTone />,
+          path: 'https://classes.uwaterloo.ca/under.html',
+          type: 'link',
+        },
+        {
+          title: 'CSEs List',
+          icon: <FormatListNumberedRtlTwoTone />,
+          path: 'http://ugradcalendar.uwaterloo.ca/page/ENG-BASc-and-BSE-Complementary-Studies-Courses-Eng',
+          type: 'link',
+        },
+        {
+          title: 'Non NE TEs List',
+          icon: <PlaylistAddTwoTone />,
+          path: 'http://ugradcalendar.uwaterloo.ca/page/ENG-Nanotechnology-Engineering#:~:text=the%20lists%20below.-,List%201,-%2D%20200%2Dlevel',
+          type: 'link',
         },
         {
           title: 'Prerequisite Checker',
