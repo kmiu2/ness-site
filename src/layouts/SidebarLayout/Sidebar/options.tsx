@@ -14,6 +14,8 @@ import {
   EventNoteTwoTone,
   FormatListNumberedRtlTwoTone,
   PlaylistAddTwoTone,
+  SavingsTwoTone,
+  PreviewTwoTone,
 } from '@mui/icons-material'
 import { MenuWrapper, SubMenuWrapper } from './styles'
 
@@ -81,10 +83,22 @@ export const Options = () => {
       title: 'Resources',
       options: [
         {
-          title: 'Resource Links',
+          title: 'NESS Resource Links',
           icon: <LanguageTwoTone />,
           path: '/resources',
           type: 'router-link',
+        },
+        {
+          title: 'EngSoc Exam Bank',
+          icon: <SavingsTwoTone />,
+          path: 'https://www.engsoc.uwaterloo.ca/resources/exam-bank/',
+          type: 'link',
+        },
+        {
+          title: 'Course Perceptions',
+          icon: <PreviewTwoTone />,
+          path: 'https://www.eng.uwaterloo.ca/scp_critiques/',
+          type: 'link',
         },
       ],
     },

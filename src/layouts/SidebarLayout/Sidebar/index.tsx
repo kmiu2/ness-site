@@ -24,6 +24,21 @@ export const Sidebar = () => {
       ? alpha(lighten(theme.header.background as string, 0.1), 0.5)
       : darken(theme.colors.alpha.black[100], 0.5)
 
+  const renderLogo = () => {
+    return (
+      <Box mt={3} display="flex" justifyContent="center" alignItems="center">
+        <Box
+          mx={2}
+          sx={{
+            width: 52,
+          }}
+        >
+          <Logo />
+        </Box>
+      </Box>
+    )
+  }
+
   return (
     <>
       <SidebarWrapper
@@ -41,16 +56,7 @@ export const Sidebar = () => {
         }}
       >
         <Scrollbar>
-          <Box mt={3}>
-            <Box
-              mx={2}
-              sx={{
-                width: 52,
-              }}
-            >
-              <Logo />
-            </Box>
-          </Box>
+          {renderLogo()}
           <Divider
             sx={{
               mt: theme.spacing(3),
@@ -78,16 +84,7 @@ export const Sidebar = () => {
       >
         <SidebarWrapper sx={{ background: theme.sidebar.background }}>
           <Scrollbar>
-            <Box mt={3}>
-              <Box
-                mx={2}
-                sx={{
-                  width: 52,
-                }}
-              >
-                <Logo />
-              </Box>
-            </Box>
+            {renderLogo()}
             <Divider
               sx={{
                 mt: theme.spacing(3),

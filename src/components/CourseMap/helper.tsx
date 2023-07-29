@@ -17,11 +17,13 @@ enum MarkerType {
   ArrowClosed = 'arrowclosed',
 }
 
+type TermType = '1A' | '1B' | '2A' | '2B' | '3A' | '3B' | '4A' | '4B'
+
 export const formattedInitialNodes = (theme: Theme) => {
   const initialNodes = initialCourses
 
   // Darken background of later terms
-  const termColors = {
+  const termColors: Record<TermType, string> = {
     '1A': darken(theme.palette.primary.main, 0.1),
     '1B': darken(theme.palette.primary.main, 0.1),
     '2A': darken(theme.palette.primary.main, 0.15),
@@ -40,7 +42,7 @@ export const formattedInitialNodes = (theme: Theme) => {
       targetPosition: Position.Left,
       selected: false,
       style: {
-        background: termColors[course.term],
+        background: termColors[course.term as TermType],
         color: theme.palette.primary.contrastText,
       },
       data: {
@@ -56,7 +58,7 @@ export const formattedInitialNodes = (theme: Theme) => {
   })
 
   // Add in headers for each term
-  const terms = ['1A', '1B', '2A', '2B', '3A', '3B', '4A', '4B']
+  const terms: TermType[] = ['1A', '1B', '2A', '2B', '3A', '3B', '4A', '4B']
   terms.forEach((term, i) => {
     formattedNodes.push({
       id: term,

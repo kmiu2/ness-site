@@ -35,6 +35,37 @@ const Team = () => {
     },
   ]
 
+  const team2324: PhotoGalleryItem[] = [
+    {
+      img: '/assets/profiles/2324/kenny_miu.jpg',
+      title: 'Kenny Miu',
+      subtitle: 'President',
+      description:
+        "Hey I'm Kenny Miu! I was the VP Academic last year and I'm excited to be your president this year! I still do enjoy software development as well as drawing in my free time!",
+    },
+    {
+      img: '/assets/profiles/2324/oscar_mccormack.jpg',
+      title: 'Oscar McCormack',
+      subtitle: 'VP Academic',
+      description:
+        "Hello! I'm Oscar McCormack, your VP Academic! I'm your main line of support for if you need assistance with matters concerning coursework, professors, or any academic matters! Hope to see you around!",
+    },
+    {
+      img: '/assets/profiles/2324/sameek_sharma.jpg',
+      title: 'Sameek Sharma',
+      subtitle: 'VP Outreach',
+      description:
+        "Hi! I'm Sameek, you VP Outreach. I'm going to try my best to get you opportunities to explore your interests! I really enjoy powerlifting and computer engineering!",
+    },
+    {
+      img: '/assets/profiles/2324/asher_scaini.jpg',
+      title: 'Asher Scaini',
+      subtitle: 'VP Communications',
+      description:
+        "Hello! My name is Asher, and I'm your VP Communications! My role is largely centred around facilitating & supporting communication amongst the NESS team, other cohorts, and the faculty at large.",
+    },
+  ]
+
   return (
     <>
       <Helmet>
@@ -44,6 +75,15 @@ const Team = () => {
         <Typography variant="h3" component="h3" gutterBottom>
           Meet the Team
         </Typography>
+        <Box height={20} />
+        <Box alignItems="center" display="flex" flexDirection="column">
+          <Typography variant="h5" component="h5" gutterBottom>
+            2023-2024 Executive Team
+          </Typography>
+          <Box width={{ xs: '100%', md: '50%' }}>
+            <PhotoGallery items={team2324} />
+          </Box>
+        </Box>
         <Box height={20} />
         <Box alignItems="center" display="flex" flexDirection="column">
           <Typography variant="h5" component="h5" gutterBottom>
