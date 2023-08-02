@@ -16,6 +16,7 @@ import {
   PlaylistAddTwoTone,
   SavingsTwoTone,
   PreviewTwoTone,
+  AutoStoriesTwoTone,
 } from '@mui/icons-material'
 import { MenuWrapper, SubMenuWrapper } from './styles'
 
@@ -86,6 +87,12 @@ export const Options = () => {
           title: 'NESS Resource Links',
           icon: <LanguageTwoTone />,
           path: '/resources',
+          type: 'router-link',
+        },
+        {
+          title: 'NESS Library',
+          icon: <AutoStoriesTwoTone />,
+          path: '/library',
           type: 'router-link',
         },
         {
