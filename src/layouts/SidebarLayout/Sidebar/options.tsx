@@ -89,12 +89,12 @@ export const Options = () => {
           path: '/resources',
           type: 'router-link',
         },
-        {
-          title: 'NESS Library',
-          icon: <AutoStoriesTwoTone />,
-          path: '/library',
-          type: 'router-link',
-        },
+        // {
+        //   title: 'NESS Library',
+        //   icon: <AutoStoriesTwoTone />,
+        //   path: '/library',
+        //   type: 'router-link',
+        // },
         {
           title: 'EngSoc Exam Bank',
           icon: <SavingsTwoTone />,
