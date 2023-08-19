@@ -16,6 +16,7 @@ const Courses = Loader(lazy(() => import('./pages/courses')))
 const About = Loader(lazy(() => import('./pages/about')))
 const Team = Loader(lazy(() => import('./pages/team')))
 const Resources = Loader(lazy(() => import('./pages/resources')))
+const Library = Loader(lazy(() => import('./pages/library')))
 
 export const routes: RouteObject[] = [
   {
@@ -65,6 +66,16 @@ export const routes: RouteObject[] = [
       {
         path: '',
         element: <Resources />,
+      },
+    ],
+  },
+  {
+    path: '/library',
+    element: <SidebarLayout />,
+    children: [
+      {
+        path: '',
+        element: <Library />,
       },
     ],
   },

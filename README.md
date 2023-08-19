@@ -1,5 +1,9 @@
 # The NESS Site
 
+## NESS Site Guide
+
+A more detailed tutorial can be found [here](https://docs.google.com/document/d/1SRMsIUQtYv0Aco6MGTzzCFVNb1by9VsPmkbLcsQaItk/edit). Log in with the NESS Gmail account to view it!
+
 ## Recommended Setup
 
 Download [VSCode](https://code.visualstudio.com/download) and install Prettier
