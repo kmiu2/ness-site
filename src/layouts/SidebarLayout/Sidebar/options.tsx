@@ -16,7 +16,7 @@ import {
   PlaylistAddTwoTone,
   SavingsTwoTone,
   PreviewTwoTone,
-  AutoStoriesTwoTone,
+  // AutoStoriesTwoTone,
 } from '@mui/icons-material'
 import { MenuWrapper, SubMenuWrapper } from './styles'
 
