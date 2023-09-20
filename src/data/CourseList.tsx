@@ -710,7 +710,7 @@ export const initialCourses = [
       'Prereq: 4U Calculus and Vectors; Open only to students in Electrical and Computer Engineering or Software Engineering or Nanotechnology Engineering. Antireq: MATH 116, 124, 127, 137, 147',
     term: '1A',
     x: 0,
-    y: 600,
+    y: 500,
   },
   {
     course_code: 'MATH 119',
@@ -721,6 +721,6 @@ export const initialCourses = [
       'Prereq: One of MATH 116, 117, 127, 137, 147; Open only to students in Electrical and Computer Engineering or Software Engineering or Nanotechnology Engineering. Antireq: MATH 118, 128, 138, 148',
     term: '1B',
     x: 200,
-    y: 700,
+    y: 600,
   },
 ]
