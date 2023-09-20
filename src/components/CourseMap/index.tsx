@@ -72,6 +72,8 @@ export const CourseMap = () => {
           }}
           onClose={handleCloseAlert}
         >
+          <b>Please keep this is for the '23 - '24 calendar year!</b>
+          <br />
           Click on a course to view more information. Use the bottom left
           controls to change the view.
         </Alert>
@@ -133,7 +135,7 @@ export const CourseMap = () => {
             color: theme.colors.alpha.white[100],
           }}
         >
-          NE Course Map ('22 - '23)
+          NE Course Map ('23 - '24)
         </Panel>
         <Controls />
         <Background />

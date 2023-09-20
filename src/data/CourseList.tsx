@@ -10,16 +10,6 @@ export const initialCourses = [
     y: 0,
   },
   {
-    course_code: 'NE 101',
-    course_name: 'Nanotechnology Engineering Practice',
-    course_desc:
-      'Areas of research and professional practice in nanotechnology engineering; exposure to concepts from other engineering plans; support material for the 1A academic term. [Offered: F]',
-    course_prereq: 'Prereq: Level 1A Nanotechnology Engineering',
-    term: '1A',
-    x: 0,
-    y: 100,
-  },
-  {
     course_code: 'NE 102',
     course_name:
       'Introduction to Nanomaterials Health Risk; Nanotechnology Engineering Practice',
@@ -31,34 +21,24 @@ export const initialCourses = [
     y: 0,
   },
   {
-    course_code: 'NE 102B',
-    course_name: 'Nanotechnology Engineering Practice',
-    course_desc:
-      'Areas of research and professional practice in nanotechnology engineering; exposure to concepts from other engineering plans; support material for the 1B academic term, including aspects of co-operative education and professional or career development. [Offered: W]',
-    course_prereq: 'Prereq: Level at least 1B Nanotechnology Engineering',
-    term: '1B',
-    x: 200,
-    y: 100,
-  },
-  {
     course_code: 'NE 109',
     course_name: 'Societal and Environmental Impacts of Nanotechnology',
     course_desc:
-      'Nanotechnology in society; health and environmental sustainability; engineering ethics, policies, and regulations; Canadian legal system, tort, and intellectual property; examples of nanotechnology innovation and commercialization. [Offered: F]',
+      'Nanotechnology in society; health and environmental sustainability; introduction to environmental life cycle assessments; engineering ethics, policies, and regulations; Canadian legal system, tort, and intellectual property; examples of nanotechnology innovation and commercialization. [Offered: F]',
     course_prereq: 'Prereq: Level 1A Nanotechnology Engineering',
     term: '1A',
     x: 0,
-    y: 200,
+    y: 100,
   },
   {
     course_code: 'NE 110',
     course_name: 'Introduction to Nanomaterials Health Risks',
     course_desc:
-      'Nanomaterial impacts on worker, consumer, and environmental health. Engineered nanomaterials and ultrafines. Chemical risk assessment. Nanomaterial exposure characterization. Introductory nanotoxicology. Environmental chemical impacts, transport, and bio-accumulation. Human risks, and benefits. Introductory epidemiology, including study design, strength of association, bias, confounding and causal inference. [Offered: W]',
+      'Nanomaterial impacts on worker, consumer, and environmental health. Engineered nanomaterials and ultrafines. Chemical risk assessment. Nanomaterial exposure characterization. Introductory nanotoxicology. Environmental chemical impacts, transport, and bio-accumulation. Introduction to UN Sustainable Development Goals. Human nanomaterial health risks and benefits. Introductory epidemiology, including study design, strength of association, bias, confounding, and causal inference. [Offered: W]',
     course_prereq: 'Prereq: Level at least 1B Nanotechnology Engineering',
     term: '1B',
     x: 200,
-    y: 200,
+    y: 100,
   },
   {
     course_code: 'NE 111',
@@ -68,7 +48,7 @@ export const initialCourses = [
     course_prereq: 'Prereq: Level 1A Nanotechnology Engineering',
     term: '1A',
     x: 0,
-    y: 300,
+    y: 200,
   },
   {
     course_code: 'NE 112',
@@ -78,7 +58,7 @@ export const initialCourses = [
     course_prereq: 'Antireq: MATH 114, 115, 106, 136, 146, SYDE 114',
     term: '1A',
     x: 0,
-    y: 400,
+    y: 300,
   },
   {
     course_code: 'NE 113',
@@ -89,7 +69,7 @@ export const initialCourses = [
       'Antireq: CIVE 121, CS 115, 135, 145, ECE 150, MTE 121, SYDE 121',
     term: '1B',
     x: 200,
-    y: 300,
+    y: 200,
   },
   {
     course_code: 'NE 121',
@@ -99,7 +79,7 @@ export const initialCourses = [
     course_prereq: 'Antireq: CHE 102, CHEM 120, 123',
     term: '1A',
     x: 0,
-    y: 500,
+    y: 400,
   },
   {
     course_code: 'NE 125',
@@ -109,27 +89,29 @@ export const initialCourses = [
     course_prereq: 'Antireq: CHE 241, CIVE 265, ME 235',
     term: '1B',
     x: 200,
-    y: 400,
+    y: 300,
   },
   {
     course_code: 'NE 131',
     course_name: 'Physics for Nanotechnology Engineering',
     course_desc:
       'A first course in physics that introduces basic topics in classical mechanics, wave mechanics, and physical optics. [Offered: W] ',
-    course_prereq: 'Antireq: PHYS 111, 115, 121, SYDE 182',
+    course_prereq:
+      'Antireq: BME 182, CIVE 104, ECE 105, PHYS 111, 115, 121, SYDE 182',
     term: '1B',
     x: 200,
-    y: 500,
+    y: 400,
   },
   {
     course_code: 'NE 140',
     course_name: 'Linear Circuits',
     course_desc:
-      "Charge, current, and voltage. Resistance, Ohm's Law, Kirchhoff's voltage, and current laws. Nodal, mesh analysis, and source transformation. Superposition, Th\u00e9venin, and Norton equivalents. Capacitance, inductance, electrical energy dissipation, and first-order transient response circuits. Phasors, impedances, and alternating current (AC) steady state analysis. Diodes circuit applications. Ideal operational amplifier circuits. Frequency filter types, and active filter circuits' configuration. [Offered: W] ",
-    course_prereq: 'Antireq: BME 392, ECE 140, GENE 123, MTE 120, SYDE 292',
+      "Charge, current, and voltage. Resistance, Ohm's Law, Kirchhoff's voltage, and current laws. Nodal, mesh analysis, and source transformation. Superposition, Th\u00e9venin, and Norton equivalents. Capacitance, inductance, electrical energy dissipation, and first-order transient response circuits. Phasors, impedances, and alternating current (AC) steady state analysis. Ideal operational amplifier circuits. Frequency filter types, and active filter circuits' configuration. Introduction to the fundamentals of electronic waste recycling. [Offered: W] ",
+    course_prereq:
+      'Antireq: AE 123, (BME 294 and BME 294L), CIVE 123, ECE 140, ENVE 123, GENE 123, GEOE 123, ME 123, MTE 120, SYDE 292',
     term: '1B',
     x: 200,
-    y: 600,
+    y: 500,
   },
   {
     course_code: 'NE 201',
@@ -140,16 +122,6 @@ export const initialCourses = [
     term: '2A',
     x: 400,
     y: 0,
-  },
-  {
-    course_code: 'NE 201A',
-    course_name: 'Nanotechnology Engineering Practice',
-    course_desc:
-      'Areas of research and professional practice in nanotechnology engineering; exposure to concepts from other engineering plans; support material for the 2A academic term, including aspects of co-operative education and professional or career development. [Offered: F, first offered Fall 2023]',
-    course_prereq: 'Prereq: Level at least 2A Nanotechnology Engineering',
-    term: '2A',
-    x: 400,
-    y: 100,
   },
   {
     course_code: 'NE 202',
@@ -163,16 +135,6 @@ export const initialCourses = [
     y: 0,
   },
   {
-    course_code: 'NE 202B',
-    course_name: 'Nanotechnology Engineering Practice',
-    course_desc:
-      'Areas of research and professional practice in nanotechnology engineering; exposure to concepts from other engineering plans; support material for the 2B academic term, including aspects of co-operative education and professional or career development. [Offered: S, first offered spring 2024]',
-    course_prereq: 'Prereq: Level at least 2B Nanotechnology Engineering',
-    term: '2B',
-    x: 600,
-    y: 100,
-  },
-  {
     course_code: 'NE 215',
     course_name: 'Probability and Statistics',
     course_desc:
@@ -181,7 +143,7 @@ export const initialCourses = [
       'Antireq: CHE 220, CIVE 224, ME 202, STAT 202, 206, 220, 230, SYDE 213',
     term: '2A',
     x: 400,
-    y: 200,
+    y: 100,
   },
   {
     course_code: 'NE 216',
@@ -191,7 +153,7 @@ export const initialCourses = [
     course_prereq: 'Antireq: AMATH 350, MATH 218, 228',
     term: '2A',
     x: 400,
-    y: 300,
+    y: 200,
   },
   {
     course_code: 'NE 217',
@@ -201,7 +163,7 @@ export const initialCourses = [
     course_prereq: 'Prereq: Level at least 2B Nanotechnology Engineering',
     term: '2B',
     x: 600,
-    y: 200,
+    y: 100,
   },
   {
     course_code: 'NE 220L',
@@ -211,7 +173,7 @@ export const initialCourses = [
     course_prereq: 'Prereq: NE 125; 2A Nanotechnology Engineering',
     term: '2A',
     x: 400,
-    y: 400,
+    y: 300,
   },
   {
     course_code: 'NE 222',
@@ -221,17 +183,7 @@ export const initialCourses = [
     course_prereq: 'Antireq: (CHEM 262 and 262L), 264, (CHEM 266 and 266L)',
     term: '2A',
     x: 400,
-    y: 500,
-  },
-  {
-    course_code: 'NE 224',
-    course_name: 'Biochemistry for Nanotechnology Engineers',
-    course_desc:
-      'An introduction to the chemistry of amino acids, carbohydrates, lipids and nucleic acids. Structure and properties of proteins and enzymes. An introduction to cell biochemistry. Applications to nanobiotechnology. [Offered: S] ',
-    course_prereq: 'Antireq: CHEM 233, 237',
-    term: '2B',
-    x: 600,
-    y: 300,
+    y: 400,
   },
   {
     course_code: 'NE 225',
@@ -241,7 +193,7 @@ export const initialCourses = [
     course_prereq: 'Prereq: Level at least 2B Nanotechnology Engineering',
     term: '2B',
     x: 600,
-    y: 400,
+    y: 200,
   },
   {
     course_code: 'NE 226',
@@ -251,7 +203,7 @@ export const initialCourses = [
     course_prereq: 'Prereq: Level at least 2B Nanotechnology Engineering',
     term: '2B',
     x: 600,
-    y: 500,
+    y: 300,
   },
   {
     course_code: 'NE 226L',
@@ -261,7 +213,7 @@ export const initialCourses = [
     course_prereq: 'Prereq: 2B Nanotechnology Engineering.',
     term: '2A',
     x: 400,
-    y: 600,
+    y: 500,
   },
   {
     course_code: 'NE 241',
@@ -271,7 +223,7 @@ export const initialCourses = [
     course_prereq: 'Antireq: ECE 106, MTE 120, SYDE 283',
     term: '2A',
     x: 400,
-    y: 700,
+    y: 600,
   },
   {
     course_code: 'NE 242',
@@ -281,7 +233,7 @@ export const initialCourses = [
     course_prereq: 'Antireq: ECE 231',
     term: '2B',
     x: 600,
-    y: 600,
+    y: 400,
   },
   {
     course_code: 'NE 281',
@@ -291,7 +243,7 @@ export const initialCourses = [
     course_prereq: 'Antireq: BIOL 130, CHE 161, BME 285',
     term: '2B',
     x: 600,
-    y: 700,
+    y: 500,
   },
   {
     course_code: 'NE 301',
@@ -305,26 +257,6 @@ export const initialCourses = [
     y: 0,
   },
   {
-    course_code: 'NE 301A',
-    course_name: 'Nanotechnology Engineering Practice',
-    course_desc:
-      'Areas of research and professional practice in nanotechnology engineering; exposure to concepts from other engineering plans; support material for the 3A academic term, including aspects of co-operative education and professional or career development. [Offered: S, first offered spring 2025]',
-    course_prereq: 'Prereq: Level at least 3A Nanotechnology Engineering',
-    term: '3A',
-    x: 800,
-    y: 100,
-  },
-  {
-    course_code: 'NE 302',
-    course_name: 'Nanotechnology Engineering Practice',
-    course_desc:
-      'Areas of research and professional practice in nanotechnology engineering; exposure to concepts from other engineering plans; support material for the 3B academic term, including aspects of co-operative education and professional or career development. [Offered: F]',
-    course_prereq: 'Prereq: Level at least 3B Nanotechnology Engineering',
-    term: '3B',
-    x: 1000,
-    y: 0,
-  },
-  {
     course_code: 'NE 307',
     course_name: 'Introduction to Nanosystems Design',
     course_desc:
@@ -332,7 +264,7 @@ export const initialCourses = [
     course_prereq: 'Prereq: 3B Nanotechnology Engineering',
     term: '3B',
     x: 1000,
-    y: 100,
+    y: 0,
   },
   {
     course_code: 'NE 318',
@@ -342,7 +274,7 @@ export const initialCourses = [
     course_prereq: 'Prereq: NE 216, 217; 3A Nanotechnology Engineering',
     term: '3A',
     x: 800,
-    y: 200,
+    y: 100,
   },
   {
     course_code: 'NE 320L',
@@ -352,7 +284,7 @@ export const initialCourses = [
     course_prereq: 'Prereq: NE 226; 3A Nanotechnology Engineering',
     term: '3A',
     x: 800,
-    y: 300,
+    y: 200,
   },
   {
     course_code: 'NE 330L',
@@ -362,7 +294,7 @@ export const initialCourses = [
     course_prereq: 'Prereq: Level at least 3B Nanotechnology Engineering',
     term: '3B',
     x: 1000,
-    y: 200,
+    y: 100,
   },
   {
     course_code: 'NE 332',
@@ -372,17 +304,17 @@ export const initialCourses = [
     course_prereq: 'Antireq: CHEM 356, ECE 405, PHYS 233, 234',
     term: '3A',
     x: 800,
-    y: 400,
+    y: 300,
   },
   {
     course_code: 'NE 333',
     course_name: 'Macromolecular Science',
     course_desc:
-      'Basic definitions and polymer nomenclature, molecular weight averages and distributions, constitutional and configurational isomerism, rubber elasticity, step-growth and free-radical chain-growth polymerizations, emulsion polymerization. [Offered: S] ',
+      'Basic definitions, polymer types and nomenclature, molecular weight averages and distributions, structure and properties. Chemical kinetics, step-growth and free-radical chain-growth polymerizations, polymer recycling and sustainable design. [Offered: S] ',
     course_prereq: 'Antireq: CHE 541, CHEM 370, MNS 322',
     term: '3A',
     x: 800,
-    y: 500,
+    y: 400,
   },
   {
     course_code: 'NE 334',
@@ -392,7 +324,7 @@ export const initialCourses = [
     course_prereq: 'Antireq: CHEM 400 (Topic: Statistical Mechanics), PHYS 359',
     term: '3B',
     x: 1000,
-    y: 300,
+    y: 200,
   },
   {
     course_code: 'NE 335',
@@ -402,7 +334,7 @@ export const initialCourses = [
     course_prereq: 'Antireq: CHE 541',
     term: '3B',
     x: 1000,
-    y: 400,
+    y: 300,
   },
   {
     course_code: 'NE 336',
@@ -412,7 +344,7 @@ export const initialCourses = [
     course_prereq: 'Prereq: Level at least 3B Nanotechnology Engineering',
     term: '3B',
     x: 1000,
-    y: 500,
+    y: 400,
   },
   {
     course_code: 'NE 340L',
@@ -422,7 +354,7 @@ export const initialCourses = [
     course_prereq: 'Prereq: NE 343; 3B Nanotechnology Engineering',
     term: '3B',
     x: 1000,
-    y: 600,
+    y: 500,
   },
   {
     course_code: 'NE 343',
@@ -432,7 +364,7 @@ export const initialCourses = [
     course_prereq: 'Antireq: ECE 433',
     term: '3A',
     x: 800,
-    y: 600,
+    y: 500,
   },
   {
     course_code: 'NE 344',
@@ -442,7 +374,7 @@ export const initialCourses = [
     course_prereq: 'Antireq: ECE 240, 242, 340, SYDE 292',
     term: '3B',
     x: 1000,
-    y: 700,
+    y: 600,
   },
   {
     course_code: 'NE 345',
@@ -452,7 +384,7 @@ export const initialCourses = [
     course_prereq: 'Prereq: Level at least 3B Nanotechnology Engineering',
     term: '3B',
     x: 1000,
-    y: 800,
+    y: 700,
   },
   {
     course_code: 'NE 350',
@@ -462,7 +394,7 @@ export const initialCourses = [
     course_prereq: 'Antireq: MSCI 392, WKRPT 300, 301',
     term: '3B',
     x: 1000,
-    y: 900,
+    y: 800,
   },
   {
     course_code: 'NE 352',
@@ -473,7 +405,7 @@ export const initialCourses = [
       'Antireq: CHEM 400 (Topic: Surface Science and Nanotechnology)',
     term: '3B',
     x: 1000,
-    y: 1000,
+    y: 900,
   },
   {
     course_code: 'NE 353',
@@ -484,7 +416,7 @@ export const initialCourses = [
       'Prereq: NE 343; Level at least 3B Nanotechnology Engineering',
     term: '3B',
     x: 1000,
-    y: 1100,
+    y: 1000,
   },
   {
     course_code: 'NE 381',
@@ -494,7 +426,7 @@ export const initialCourses = [
     course_prereq: 'Prereq: Level at least 3B Nanotechnology Engineering',
     term: '3B',
     x: 1000,
-    y: 1200,
+    y: 1100,
   },
   {
     course_code: 'NE 408',
