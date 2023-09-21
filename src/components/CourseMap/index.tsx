@@ -72,7 +72,7 @@ export const CourseMap = () => {
           }}
           onClose={handleCloseAlert}
         >
-          <b>Please keep this is for the '23 - '24 calendar year!</b>
+          <b>Please keep in mind this is for the '23 - '24 calendar year!</b>
           <br />
           Click on a course to view more information. Use the bottom left
           controls to change the view.
