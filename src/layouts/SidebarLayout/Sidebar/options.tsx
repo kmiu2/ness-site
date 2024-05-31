@@ -62,13 +62,13 @@ export const Options = () => {
         {
           title: 'CSEs List',
           icon: <FormatListNumberedRtlTwoTone />,
-          path: 'https://ugradcalendar.uwaterloo.ca/page/ENG-BASc-and-BSE-Complementary-Studies-Courses-Eng',
+          path: 'https://uwaterloo.ca/academic-calendar/undergraduate-studies/catalog#/programs/B1ligZqRn',
           type: 'link',
         },
         {
           title: 'Non NE TEs List',
           icon: <PlaylistAddTwoTone />,
-          path: 'https://ugradcalendar.uwaterloo.ca/page/ENG-Nanotechnology-Engineering#:~:text=the%20lists%20below.-,List%201,-%2D%20200%2Dlevel',
+          path: 'https://uwaterloo.ca/academic-calendar/undergraduate-studies/catalog#/programs/HkW0yyA0s3?bc=true&bcCurrent=Nanotechnology%20Engineering%20(Bachelor%20of%20Applied%20Science%20-%20Honours)&bcGroup=Nanotechnology%20Engineering&bcItemType=programs',
           type: 'link',
         },
       ],
